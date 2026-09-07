@@ -339,7 +339,7 @@ export const PRODUCTS: Product[] = [
     id: 'brahmi',
     categoryId: '02-supplements',
     subCategory: 'Dietary Supplements',
-    title: 'Brahmi (Bacopa monnieri) Tablets & Powder',
+    title: 'Brahmi (Bacopa monnieri) Tablets',
     botanicalName: 'Bacopa monnieri',
     tagline: 'Cognitive Function & Memory Nootropic',
     badges: ['10% BACOSIDES', 'Memory & Focus Nootropic'],
@@ -350,7 +350,7 @@ export const PRODUCTS: Product[] = [
       'Supports mental well-being and cognitive performance.',
       'Traditionally used to support speech and developmental functions in children.'
     ],
-    variant: '15 Tablets In A Strip, 500mg Each / 150g Can',
+    variant: '15 Tablets In A Strip, 500mg Each',
     keyIngredients: 'Brahmi Whole Plant Extract',
     images: ['/assets/Buy-Brahmi-Tablet-Memory-and-Mental-Function-Booster.webp']
   },
@@ -494,24 +494,39 @@ export const PRODUCTS: Product[] = [
     id: 'nvd3',
     categoryId: '02-supplements',
     subCategory: 'Dietary Supplements',
-    title: 'NVD3 & NVD3+ Natural Vitamin D3',
+    title: 'NVD3 | 5000IU Natural Vitamin D3 (Daily)',
     tagline: 'Plant-Sourced Lichen/Stone Flower Vitamin D3',
-    badges: ['5000 IU & 50000 IU', 'Daily & Weekly Formats'],
+    badges: ['5000 IU DAILY', 'Daily Bone & Immune Care'],
     indications: [
       'Made with naturally sourced Stone Flower (Parmelia perlata).',
       '100% vegetarian capsule, free from preservatives and toxic chemicals.',
       'Supports healthy bones, muscles, and nerves.',
       'Supports cognitive function and overall wellness.',
       'Promotes healthy teeth and gums.',
-      'Supports healthy immune function.',
-      'Available in Daily (5000IU) and Weekly (50000IU) dosages.'
+      'Supports healthy immune function.'
     ],
-    variant: 'Daily 5000IU (60 Caps) / Weekly 50000IU (12 Caps)',
+    variant: '60 Capsules in a Bottle; 50mg Each',
     keyIngredients: 'Saileya (Parmelia perlata) Extract',
-    images: [
-      '/assets/Buy-NVD3-50000IU-Natural-Vitamin-D3-Supplement.webp',
-      '/assets/Shop-NVD3-50000IU-Natural-Vitamin-D3-Supplement.webp'
-    ]
+    images: ['/assets/Buy-NVD3-50000IU-Natural-Vitamin-D3-Supplement.webp']
+  },
+  {
+    id: 'nvd3-plus',
+    categoryId: '02-supplements',
+    subCategory: 'Dietary Supplements',
+    title: 'NVD3+ | 50000IU Natural Vitamin D3 (Weekly)',
+    tagline: 'High Potency Botanical Vitamin D3',
+    badges: ['50000 IU WEEKLY', 'High Potency Bone Support'],
+    indications: [
+      'Made with naturally sourced Stone Flower (Parmelia perlata).',
+      '100% vegetarian capsule, free from preservatives and toxic chemicals.',
+      'Supports healthy bones, muscles, and nerves.',
+      'Supports cognitive function and overall wellness.',
+      'Promotes healthy teeth and gums.',
+      'Weekly Consumption formulation.'
+    ],
+    variant: '12 Capsules in a Box; 500mg Each',
+    keyIngredients: 'Saileya (Parmelia perlata) Extract',
+    images: ['/assets/Shop-NVD3-50000IU-Natural-Vitamin-D3-Supplement.webp']
   },
   {
     id: 'pudin-punch',
@@ -641,7 +656,7 @@ export const PRODUCTS: Product[] = [
     subCategory: 'Skin care & Personal Care',
     title: 'Castile Liquid Soap',
     tagline: '100% Pure Virgin Plant Oil Cleanser',
-    badges: ['100% PLANT OIL', 'Unscented, Lavender & Cedarwood'],
+    badges: ['LIQUID SOAP RANGE', 'Unscented, Lavender & Cedarwood'],
     indications: [
       'Made with 100% plant-based virgin oils, this natural, handmade soap gently cleanses while moisturizing and nourishing the skin.',
       'Olive Oil – Helps moisturize and protect dry, cracked skin.',
@@ -664,7 +679,7 @@ export const PRODUCTS: Product[] = [
     subCategory: 'Skin care & Personal Care',
     title: 'Castile Bar Soap',
     tagline: 'Gentle Cold-Process Soap for Sensitive Skin & Babies',
-    badges: ['COLD PROCESS 100g', 'Multiple Essential Scents'],
+    badges: ['BAR SOAP RANGE', 'Cold-Process 100g Bars'],
     indications: [
       'A 100% herbal, fragrance-free soap made using the cold-process method, specially formulated for babies and sensitive skin.',
       'Natural Glycerin – Helps hydrate and nourish the skin.',
@@ -704,26 +719,61 @@ export const PRODUCTS: Product[] = [
     images: ['/assets/Buy-Organic-Aloe-Vera-Hemp-Cream-Vitamin-E-Nourishment.webp']
   },
   {
-    id: 'aloe-botanical-gels',
+    id: 'aloe-ashwagandha-mulethi',
     categoryId: '04-personalcare',
     subCategory: 'Skin care & Personal Care',
-    title: 'Aloe Vera Gels (Ashwagandha & Mulethi / Rose / Saffron)',
-    tagline: 'Lightweight Soothing & Hydrating Botanical Gels',
-    badges: ['PURE BOTANICAL GELS', 'Ashwagandha, Rose & Saffron'],
+    title: 'Aloe Vera Gel with Ashwagandha & Mulethi',
+    tagline: 'Lightweight Soothing & Stress Relief Gel',
+    badges: ['SOOTHING BOTANICAL GEL', 'Ashwagandha & Mulethi'],
     indications: [
-      'Soothing botanical gels combining Aloe Vera with Ashwagandha & Mulethi, Kashmiri Saffron, and Rose water.',
-      'Helps hydrate and soften the skin with lightweight, non-greasy absorption.',
-      'Ashwagandha & Mulethi: Comforts dry or stress-looking skin.',
-      'Rose: Provides a soothing, cooling, and refreshing feel.',
-      'Saffron: Helps improve the appearance of dull, tired-looking skin for a radiant complexion.'
+      'A soothing botanical gel combining Aloe Vera, Ashwagandha and Mulethi to provide lightweight hydration and refreshing everyday skin care.',
+      'Helps hydrate and soften the skin.',
+      'Provides a soothing, refreshing feel.',
+      'Helps comfort dry or stressed-looking skin.',
+      'Lightweight and easy to absorb.',
+      'Suitable for everyday use.'
     ],
-    variant: '50ml In A Jar (3 Botanical Formulations)',
-    keyIngredients: 'Aloe Vera Gel, Ashwagandha, Mulethi, Rose Hydrosol, Kashmiri Saffron',
-    images: [
-      '/assets/aloeveraashwogandha.webp',
-      '/assets/ALOE ROSE.webp',
-      '/assets/ALOE SAFFRONwebp.webp'
-    ]
+    variant: '50ml In A Jar',
+    keyIngredients: 'Aloe Vera Gel, Ashwagandha Extract, Mulethi Extract',
+    images: ['/assets/aloeveraashwogandha.webp']
+  },
+  {
+    id: 'aloe-rose-gel',
+    categoryId: '04-personalcare',
+    subCategory: 'Skin care & Personal Care',
+    title: 'Aloe Vera Gel with Rose',
+    tagline: 'Cooling Botanical Refreshment',
+    badges: ['PURE ROSE WATER', 'Non-Greasy Cooling Hydration'],
+    indications: [
+      'A refreshing Aloe Vera and Rose gel that helps hydrate, soften and refresh the skin while providing a pleasant botanical experience.',
+      'Helps maintain skin hydration.',
+      'Leaves skin feeling soft and refreshed.',
+      'Provides a soothing, cooling feel.',
+      'Lightweight, non-greasy application.',
+      'Suitable for everyday use.'
+    ],
+    variant: '50ml In A Jar',
+    keyIngredients: 'Aloe Vera Gel, Pure Rose Extract & Hydrosol',
+    images: ['/assets/ALOE ROSE.webp']
+  },
+  {
+    id: 'aloe-saffron-gel',
+    categoryId: '04-personalcare',
+    subCategory: 'Skin care & Personal Care',
+    title: 'Aloe Vera Gel with Saffron',
+    tagline: 'Radiance & Complexion Enhancement',
+    badges: ['KASHMIRI SAFFRON', 'Radiance & Smoothness'],
+    indications: [
+      'A nourishing botanical gel combining Aloe Vera and Saffron for lightweight hydration and everyday skin care.',
+      'Helps hydrate and soften the skin.',
+      'Helps improve the appearance of dull, tired-looking skin.',
+      'Leaves skin feeling refreshed and smooth.',
+      'Lightweight and non-greasy.',
+      'Suitable for everyday use.'
+    ],
+    variant: '50ml In A Jar',
+    keyIngredients: 'Aloe Vera Gel, Kumkuma / Saffron Extract',
+    images: ['/assets/ALOE SAFFRONwebp.webp']
   },
   {
     id: 'multi-herbal-shampoo',

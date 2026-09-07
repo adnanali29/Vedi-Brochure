@@ -17,7 +17,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
   const currentImg =
     product.images && product.images.length > 0
       ? product.images[modalImgIndex]
-      : '/assets/JATIPHALADI CHRNA.webp';
+      : '/assets/LOGO.png';
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -27,11 +27,14 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         </button>
 
         {/* Modal Top Gallery */}
-        <div style={{ background: '#F4F2EA', borderRadius: '14px', overflow: 'hidden', height: '240px', marginBottom: '1.5rem', position: 'relative' }}>
+        <div style={{ background: '#F4F2EA', borderRadius: '14px', overflow: 'hidden', height: '260px', marginBottom: '1.5rem', position: 'relative' }}>
           <img
             src={currentImg}
             alt={product.title}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '12px' }}
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = '/assets/LOGO.png';
+            }}
           />
           {product.images && product.images.length > 1 && (
             <div style={{ position: 'absolute', bottom: '10px', left: 0, right: 0, display: 'flex', justifyContent: 'center', gap: '8px' }}>
@@ -50,7 +53,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                     cursor: 'pointer'
                   }}
                 >
-                  Variant {idx + 1}
+                  Format {idx + 1}
                 </button>
               ))}
             </div>
@@ -65,7 +68,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
           ))}
         </div>
 
-        <h2 className="card-product-title" style={{ fontSize: '2.4rem', marginBottom: '0.25rem' }}>
+        <h2 className="card-product-title" style={{ fontSize: '2.2rem', marginBottom: '0.25rem' }}>
           {product.title}
         </h2>
         {product.botanicalName && (
@@ -73,7 +76,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
             Botanical: {product.botanicalName}
           </div>
         )}
-        <p style={{ color: '#4A5852', fontSize: '1rem', fontFamily: 'var(--font-body)', fontWeight: 500, marginBottom: '1.5rem' }}>
+        <p style={{ color: '#4A5852', fontSize: '0.95rem', fontFamily: 'var(--font-body)', fontWeight: 500, marginBottom: '1.5rem' }}>
           {product.tagline}
         </p>
 

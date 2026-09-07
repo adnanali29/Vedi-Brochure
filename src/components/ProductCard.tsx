@@ -26,11 +26,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
   const activeImgSrc =
     product.images && product.images.length > 0
       ? product.images[currentImgIndex]
-      : '/assets/JATIPHALADI CHRNA.webp';
+      : '/assets/LOGO.png';
 
   return (
     <article className="product-card">
-      {/* Left Column: Edge to Edge Image Box with Auto-Slide Carousel */}
+      {/* Top Column: Square Image Box with Auto-Slide Carousel */}
       <div className="card-image-box" onClick={() => onSelect(product)} style={{ cursor: 'pointer' }}>
         {product.isRx && (
           <span className="card-rx-badge" title="Physician Supervised Formulation">
@@ -43,7 +43,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
           alt={product.title}
           loading="lazy"
           onError={(e) => {
-            (e.target as HTMLImageElement).src = '/assets/JATIPHALADI CHRNA.webp';
+            (e.target as HTMLImageElement).src = '/assets/LOGO.png';
           }}
         />
 
@@ -59,7 +59,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
                     e.stopPropagation();
                     setCurrentImgIndex(idx);
                   }}
-                  title={`View Variant ${idx + 1}`}
+                  title={`View Format ${idx + 1}`}
                 />
               ))}
             </div>
@@ -70,10 +70,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
         )}
       </div>
 
-      {/* Right Column: Content Box matching Image 1 */}
+      {/* Bottom Column: Content Box */}
       <div className="card-content-box">
         <div>
-          {/* Badge Pills matching Image 1 */}
+          {/* Badge Pills */}
           <div className="card-badges-row">
             {product.badges.map((badge, idx) => (
               <span
@@ -85,19 +85,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
             ))}
           </div>
 
-          {/* Product Title matching Image 1 & Khand font */}
+          {/* Product Title */}
           <h3 className="card-product-title">{product.title}</h3>
           {product.tagline && <div className="card-tagline">{product.tagline}</div>}
 
           {/* Rx Warning notice if applicable */}
           {product.isRx && product.rxWarning && (
-            <div className="rx-notice-banner" style={{ margin: '0.75rem 0' }}>
+            <div className="rx-notice-banner" style={{ margin: '0.6rem 0' }}>
               <ShieldAlert className="rx-notice-icon" />
               <span>{product.rxWarning}</span>
             </div>
           )}
 
-          {/* Indications List matching Image 1 */}
+          {/* Indications List */}
           <div className="indications-heading">CLINICAL & SUPPORTIVE INDICATIONS:</div>
           <ul className="indications-list">
             {product.indications.map((indication, index) => (
@@ -108,7 +108,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
           </ul>
         </div>
 
-        {/* Bottom Inset Rounded Box matching Image 1 */}
+        {/* Bottom Inset Rounded Box */}
         <div className="card-inset-box" onClick={() => onSelect(product)} style={{ cursor: 'pointer' }}>
           <div className="inset-line">
             <span className="inset-label">Available Variant:</span>
