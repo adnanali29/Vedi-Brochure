@@ -1,0 +1,2503 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedi Herbals — Brand & Product E-Brochure</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Khand for Headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#1b4332',
+              50: '#f2f7f4',
+              100: '#e1ede6',
+              200: '#c3dbce',
+              300: '#9ac1ae',
+              400: '#6ea38c',
+              500: '#4c866f',
+              600: '#386c57',
+              700: '#1b4332',
+              800: '#1b4332',
+              900: '#1b4332',
+              950: '#0d241a',
+            },
+            botanical: {
+              gold: '#c5a059',
+              goldLight: '#e4cd9e',
+              goldDark: '#9a752b',
+              cream: '#fbfaf6',
+              surface: '#ffffff',
+              border: '#e7e3d8',
+              muted: '#686660'
+            }
+          },
+          fontFamily: {
+            heading: ['Khand', 'sans-serif'],
+            subheading: ['"Arial MT Pro"', 'Arial', 'sans-serif'],
+            body: ['"Arial MT Pro"', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Typography Specifications */
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Khand', sans-serif !important;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+    }
+    .font-subheading, .product-subheading, label, .badge-heading {
+      font-family: 'Arial MT Pro', 'Arial', sans-serif !important;
+      font-weight: 700 !important;
+    }
+    body, p, span, li, .font-body {
+      font-family: 'Arial MT Pro', 'Arial', sans-serif !important;
+      font-weight: 500;
+    }
+
+    /* Edge-to-Edge 1:1 Square Product Image Box */
+    .product-image-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1 !important;
+      background-color: #f6f5f0;
+      overflow: hidden;
+    }
+
+    .image-drop-target {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .image-drop-target:hover {
+      background-color: rgba(27, 67, 50, 0.04);
+    }
+
+    .image-preview {
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute !important;
+      inset: 0 !important;
+      object-fit: cover !important;
+      display: none;
+      z-index: 10;
+    }
+
+    /* Screenshot Specification: Custom Golden Bullet Indicators */
+    .indication-list {
+      list-style: none !important;
+      padding-left: 0 !important;
+      margin: 0 !important;
+    }
+    .indication-list li {
+      position: relative;
+      padding-left: 1.15rem;
+      line-height: 1.45;
+      color: #3f3e3a;
+      margin-bottom: 0.35rem;
+    }
+    .indication-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: -0.1rem;
+      color: #c5a059;
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    /* Clean subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f0ea;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1b4332;
+      border-radius: 9999px;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: black !important; font-size: 11pt !important; }
+      .product-card { break-inside: avoid; page-break-inside: avoid; box-shadow: none !important; border: 1px solid #ccc !important; margin-bottom: 1.5rem !important; }
+      .section-container { page-break-before: always; }
+      header { position: static !important; }
+    }
+  </style>
+</head>
+<body class="bg-[#fcfbf7] text-[#2c2b29] antialiased selection:bg-[#1b4332] selection:text-white">
+
+  <!-- STICKY TOP BRAND HEADER -->
+  <header class="sticky top-0 z-50 bg-[#1b4332] text-stone-100 border-b border-botanical-gold/30 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-3">
+      
+      <!-- Brand Logo Header -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <img src="LOGO_header.png" alt="Vedi Herbals" class="h-10 sm:h-12 w-auto object-contain">
+      </a>
+
+      <!-- Desktop Navigation Bar (Hidden on Mobile) -->
+      <nav class="hidden lg:flex items-center gap-1.5 text-xs font-bold tracking-wider uppercase text-stone-200 font-subheading">
+        <a href="#about" class="px-3 py-1.5 rounded-full hover:bg-black/20 hover:text-white transition whitespace-nowrap">Story</a>
+        <a href="#rx-cannabis" class="px-3 py-1.5 rounded-full hover:bg-black/20 hover:text-white transition whitespace-nowrap">01. Rx Cannabis</a>
+        <a href="#classical" class="px-3 py-1.5 rounded-full hover:bg-black/20 hover:text-white transition whitespace-nowrap">Classical Ayurveda</a>
+        <a href="#supplements" class="px-3 py-1.5 rounded-full hover:bg-black/20 hover:text-white transition whitespace-nowrap">02. Supplements</a>
+        <a href="#hemp-nutrition" class="px-3 py-1.5 rounded-full hover:bg-black/20 hover:text-white transition whitespace-nowrap">03. Hemp Foods</a>
+        <a href="#personal-care" class="px-3 py-1.5 rounded-full hover:bg-black/20 hover:text-white transition whitespace-nowrap">04. Personal Care</a>
+        <a href="#guidance" class="px-3 py-1.5 rounded-full hover:bg-black/20 hover:text-white transition whitespace-nowrap">05. Wellness</a>
+      </nav>
+
+      <!-- Action Utilities & Mobile Trigger -->
+      <div class="flex items-center gap-2 no-print">
+        <!-- Live Search -->
+        <div class="relative">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search products..." 
+            class="bg-[#122e22] text-xs text-stone-100 rounded-full pl-7 pr-3 py-1.5 border border-botanical-gold/40 focus:outline-none focus:border-botanical-gold w-28 sm:w-44 transition-all font-body placeholder:text-stone-400"
+            onkeyup="filterProducts()"
+          >
+          <svg class="w-3.5 h-3.5 text-stone-300 absolute left-2 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+
+        <!-- Print / PDF Export Button -->
+        <button onclick="window.print()" class="hidden sm:flex px-3 py-1.5 rounded-full bg-botanical-gold hover:bg-botanical-goldLight text-[#1b4332] text-xs font-bold uppercase tracking-wider items-center gap-1 shadow font-subheading transition">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+          </svg>
+          <span>PDF</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button (No horizontal scrolling) -->
+        <button 
+          id="mobileNavToggle" 
+          onclick="toggleMobileMenu()" 
+          class="lg:hidden px-3 py-1.5 rounded-full bg-botanical-gold text-[#1b4332] text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 font-subheading shadow active:scale-95 transition"
+          aria-expanded="false"
+        >
+          <svg id="menuIconClosed" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menuIconOpen" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Stacked CTA Menu (One Below Another - Click and Go) -->
+    <div id="mobileMenuDropdown" class="hidden lg:hidden bg-[#143527] border-t border-botanical-gold/30 px-4 py-3 space-y-2 shadow-2xl">
+      <div class="text-[10px] uppercase font-bold text-botanical-goldLight tracking-[0.2em] mb-1 font-subheading">
+        Select Category &bull; Tap to Jump
+      </div>
+      <div class="flex flex-col space-y-1.5 font-subheading">
+        <a href="#about" onclick="closeMobileMenu()" class="w-full flex items-center justify-between p-2.5 rounded-lg bg-[#1b4332] border border-botanical-gold/30 text-white text-xs font-bold uppercase tracking-wider active:bg-botanical-gold active:text-[#1b4332]">
+          <span>Our Story & Promise</span>
+          <span class="text-botanical-gold">&rarr;</span>
+        </a>
+        <a href="#rx-cannabis" onclick="closeMobileMenu()" class="w-full flex items-center justify-between p-2.5 rounded-lg bg-[#1b4332] border border-botanical-gold/30 text-white text-xs font-bold uppercase tracking-wider active:bg-botanical-gold active:text-[#1b4332]">
+          <span>01. Cannabis Leaf Medicines (Rx)</span>
+          <span class="text-botanical-gold">&rarr;</span>
+        </a>
+        <a href="#classical" onclick="closeMobileMenu()" class="w-full flex items-center justify-between p-2.5 rounded-lg bg-[#1b4332] border border-botanical-gold/30 text-white text-xs font-bold uppercase tracking-wider active:bg-botanical-gold active:text-[#1b4332]">
+          <span>Classical Ayurveda Formulations</span>
+          <span class="text-botanical-gold">&rarr;</span>
+        </a>
+        <a href="#supplements" onclick="closeMobileMenu()" class="w-full flex items-center justify-between p-2.5 rounded-lg bg-[#1b4332] border border-botanical-gold/30 text-white text-xs font-bold uppercase tracking-wider active:bg-botanical-gold active:text-[#1b4332]">
+          <span>02. Dietary Supplements</span>
+          <span class="text-botanical-gold">&rarr;</span>
+        </a>
+        <a href="#hemp-nutrition" onclick="closeMobileMenu()" class="w-full flex items-center justify-between p-2.5 rounded-lg bg-[#1b4332] border border-botanical-gold/30 text-white text-xs font-bold uppercase tracking-wider active:bg-botanical-gold active:text-[#1b4332]">
+          <span>03. Hemp Food & Nutrition</span>
+          <span class="text-botanical-gold">&rarr;</span>
+        </a>
+        <a href="#personal-care" onclick="closeMobileMenu()" class="w-full flex items-center justify-between p-2.5 rounded-lg bg-[#1b4332] border border-botanical-gold/30 text-white text-xs font-bold uppercase tracking-wider active:bg-botanical-gold active:text-[#1b4332]">
+          <span>04. Skin & Personal Care</span>
+          <span class="text-botanical-gold">&rarr;</span>
+        </a>
+        <a href="#guidance" onclick="closeMobileMenu()" class="w-full flex items-center justify-between p-2.5 rounded-lg bg-[#1b4332] border border-botanical-gold/30 text-white text-xs font-bold uppercase tracking-wider active:bg-botanical-gold active:text-[#1b4332]">
+          <span>05. Professional Guidance & Clinic</span>
+          <span class="text-botanical-gold">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="bg-[#1b4332] text-white py-12 sm:py-16 px-4 text-center border-b border-botanical-gold/30">
+    <div class="max-w-4xl mx-auto">
+      <span class="inline-block px-3.5 py-1 rounded-full bg-black/25 border border-botanical-gold/50 text-botanical-goldLight text-[11px] tracking-[0.2em] uppercase font-bold mb-3 font-subheading">
+        Authentic Ayurvedic Formulations &bull; Classical & Contemporary
+      </span>
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight uppercase text-white mb-3">
+        BE ONE WITH NATURE
+      </h1>
+      <p class="text-sm sm:text-base text-stone-200 max-w-2xl mx-auto leading-relaxed font-body">
+        Cannabis Leaf Medicines & Ayurvedic Medicines | Dietary Supplements | Hemp Nutrition | Natural Personal Care | Panchakarma Therapies | Professional Guidance
+      </p>
+
+      <!-- Mobile Quick Jump Vertical CTAs -->
+      <div class="mt-6 pt-5 border-t border-botanical-gold/20 lg:hidden">
+        <p class="text-[11px] font-bold text-botanical-goldLight tracking-[0.2em] uppercase mb-2 font-subheading">
+          Explore Brochure &bull; Jump Directly
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left font-subheading">
+          <a href="#rx-cannabis" class="flex items-center justify-between p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-botanical-gold/40 text-xs font-bold text-white uppercase">
+            <span>01. Cannabis Leaf (Rx)</span>
+            <span class="text-botanical-gold">&rarr;</span>
+          </a>
+          <a href="#classical" class="flex items-center justify-between p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-botanical-gold/40 text-xs font-bold text-white uppercase">
+            <span>Classical Ayurveda</span>
+            <span class="text-botanical-gold">&rarr;</span>
+          </a>
+          <a href="#supplements" class="flex items-center justify-between p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-botanical-gold/40 text-xs font-bold text-white uppercase">
+            <span>02. Dietary Supplements</span>
+            <span class="text-botanical-gold">&rarr;</span>
+          </a>
+          <a href="#hemp-nutrition" class="flex items-center justify-between p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-botanical-gold/40 text-xs font-bold text-white uppercase">
+            <span>03. Hemp Food & Nutrition</span>
+            <span class="text-botanical-gold">&rarr;</span>
+          </a>
+          <a href="#personal-care" class="flex items-center justify-between p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-botanical-gold/40 text-xs font-bold text-white uppercase">
+            <span>04. Skin & Personal Care</span>
+            <span class="text-botanical-gold">&rarr;</span>
+          </a>
+          <a href="#guidance" class="flex items-center justify-between p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-botanical-gold/40 text-xs font-bold text-white uppercase">
+            <span>05. Wellness Center & Clinic</span>
+            <span class="text-botanical-gold">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY & OUR PROMISE -->
+  <section id="about" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white border border-botanical-border rounded-2xl p-6 sm:p-10 shadow-sm">
+      <div>
+        <span class="text-xs uppercase tracking-[0.25em] text-botanical-goldDark font-bold block mb-1 font-subheading">Heritage & Philosophy</span>
+        <h2 class="text-3xl sm:text-4xl text-[#1b4332] uppercase mb-4">Our Story</h2>
+        <p class="text-stone-700 leading-relaxed text-sm sm:text-base mb-4 font-body">
+          Vedi Herbals brings together the depth of Ayurveda, respect for indigenous knowledge and a modern approach to everyday wellness. Our portfolio spans physician-guided Cannabis leaf medicines, classical and contemporary herbal formulations, dietary supplements, hempseed-led nutrition, natural bath and body care, and professional wellness consultations.
+        </p>
+        <p class="text-stone-700 leading-relaxed text-sm sm:text-base font-body">
+          We believe nature works best when it is understood, sourced responsibly and translated with care. That belief guides the journey from ingredient selection and formulation to manufacturing, packaging, guidance and long-term partnerships. For consumers, Vedi offers clear pathways into Ayurveda. For practitioners, retailers, distributors and international partners, it offers a broad platform for building credible, locally relevant wellness portfolios.
+        </p>
+      </div>
+
+      <div class="border-t md:border-t-0 md:border-l border-botanical-border pt-6 md:pt-0 md:pl-8 flex flex-col justify-between">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-botanical-goldDark font-bold block mb-1 font-subheading">Standards of Excellence</span>
+          <h2 class="text-3xl sm:text-4xl text-[#1b4332] uppercase mb-4">Our Promise</h2>
+          <p class="text-base font-bold text-[#1b4332] mb-4 font-subheading">
+            Rooted in Ayurveda. Made for modern life.
+          </p>
+          <ul class="space-y-2.5 text-stone-700 text-sm font-body">
+            <li class="flex items-start">
+              <span class="text-[#1b4332] font-bold mr-2">&bull;</span>
+              <span>Ayurveda-led formulations across multiple wellness needs and formats.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#1b4332] font-bold mr-2">&bull;</span>
+              <span>A portfolio that connects guided care, daily wellness and natural personal care.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#1b4332] font-bold mr-2">&bull;</span>
+              <span>Plant-led product stories that are easy for consumers and partners to understand.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#1b4332] font-bold mr-2">&bull;</span>
+              <span>A commitment to responsible communication and market-appropriate compliance.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-6 pt-4 border-t border-stone-200 flex flex-wrap items-center gap-3 text-xs text-stone-500 font-subheading uppercase">
+          <span class="inline-flex items-center gap-1 font-bold text-[#1b4332]">
+            <svg class="w-4 h-4 text-botanical-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            100% Plant Based
+          </span>
+          <span class="inline-flex items-center gap-1 font-bold text-[#1b4332]">
+            <svg class="w-4 h-4 text-botanical-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Standardized Extracts
+          </span>
+          <span class="inline-flex items-center gap-1 font-bold text-[#1b4332]">
+            <svg class="w-4 h-4 text-botanical-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Doctor Supervised
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 pb-20">
+
+    <!-- ========================================== -->
+    <!-- SECTION 01: AYURVEDIC CANNABIS MEDICINES (RX) -->
+    <!-- ========================================== -->
+    <section id="rx-cannabis" class="product-category-section scroll-mt-20">
+      <div class="border-b-2 border-[#1b4332] pb-3 mb-8 flex flex-col md:flex-row md:items-end justify-between gap-2">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.25em] text-botanical-goldDark font-subheading">Physician Supervised Range</span>
+          <h2 class="text-3xl sm:text-5xl text-[#1b4332] uppercase">01 — Ayurvedic Medicines (Rx Cannabis Leaf)</h2>
+        </div>
+        <p class="text-xs text-stone-600 max-w-md font-body">
+          <strong class="text-[#1b4332] font-subheading">Note:</strong> Requires qualified healthcare professional supervision. For use only under medical guidance. Not for self-medication.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8">
+
+        <!-- CARD 1: Cannaflam -->
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="JATIPHALADI CHRNA.webp" alt="Jatiphaladi Churna">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">KAPHA-VATA HARA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Respiratory & GI Wellness</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Jatiphaladi Churna</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Cough, Cold & Chronic Diarrhoea Relief</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps relieve symptoms of cough, cold, and nasal congestion.</li>
+                <li>Supports digestive health and helps manage chronic diarrhoea and sprue syndrome.</li>
+                <li>Supports respiratory health and helps ease breathing difficulties associated with asthma.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Sachets in a Box; 3g each</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Jatiphala, Lavang, Elaichi, Twak, Nagkesar, Bhaang (<i>Cannabis sativa</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Haridrakhand-Effective-Treatment-for-Itching-Hives-and-Fungal-Infections.webp" alt="Haridrakhand">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">KANDUGHNA & KUSHTHAGHNA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">High-Curcumin Turmeric</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Haridrakhand</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Allergic Skin Relief & Radiant Complexion</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Made with high-curcumin turmeric, processed through traditional Ayurvedic methods in small batches.</li>
+                <li>Supports healthy skin and helps relieve itching and irritation.</li>
+                <li>Helps manage skin concerns such as allergic hives, dermatitis, and melasma.</li>
+                <li>Supports relief from allergic rhinitis.</li>
+                <li>Promotes healthy, radiant, and revitalized skin.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">150g Can</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Haridra (<i>Curcuma longa</i>), Sunthi, Marica, Pippali, Twak Elaichi etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="KAMESHWAR MODAKA CAN.webp" alt="Kameswar Modaka Can">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Can</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Kameshwar-Modaka-Ayurvedic-Immune-Booster-Aphrodisiac.webp" alt="Kameshwar Modaka Box">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Box</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Can"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Box"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">VRIYYA & BALYA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Immune & Reproductive</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Kameswar Modaka</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Energy, Endurance & Vitality Support</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports energy, endurance, and overall vitality.</li>
+                <li>Traditionally used to support sexual wellness and intimacy.</li>
+                <li>Helps support healthy sexual function and performance.</li>
+                <li>Supports overall immunity and reproductive wellness.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">150g Can, 15 Sachets in a Box; 5g each</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Ashwagandha (<i>Withania somnifera</i>), Shatavari (<i>Asparagus racemosus</i>), Gokshura (<i>Tribulus terrestris</i>), Safed Musli etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Sarpagandha .webp" alt="Sarpagandha Ghanvati">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">NIDRA & RAKTACHAPA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Natural Sleep & BP</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Sarpagandha Ghanvati</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Neuro-Vascular Equilibrium & Deep Rest</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps support restful sleep and manage symptoms of insomnia.</li>
+                <li>Supports healthy blood pressure levels.</li>
+                <li>Supports emotional and psychological well-being.</li>
+                <li>Traditionally used to support the body’s natural detoxification processes.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Sarpagandha (<i>Rauvolfia serpentina</i>), Jatamansi, Khurasani, Bhaang (<i>Cannabis sativa</i>) etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Vijayadi-Vati-Cannabis-Based-Relief-for-Menstrual-Pain.webp" alt="Vijayadi Vati">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">VATA SHASTRA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Menstrual Comfort</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Vijayadi Vati</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Vata Circulation & Menstrual Balance</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports healthy blood circulation and helps maintain Vata Dosha balance.</li>
+                <li>Helps relieve discomfort associated with lower back pain, headaches, breast tenderness, reduced appetite, nausea, and vomiting.</li>
+                <li>Supports the body’s natural inflammatory response.</li>
+                <li>Helps address emotional and psychological factors associated with menstrual discomfort.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Bhaang (<i>Cannabis sativa</i>), Ghrita Kumari, Apamarga, Kamala kakadi etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Vijaya-Churna-by-Vedi-Herbals-Natural-Cannabis-Leaf-Powder.jpg" alt="Vijaya Churna">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">VATA SHOOLA HARA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Pure Botanical Powder</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Vijaya Churna</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Pain Support, Healthy Digestion & Nerve Calming</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps relieve mild to acute pain associated with fibromyalgia, sciatica, arthritis, and related discomforts.</li>
+                <li>Supports the body’s natural inflammatory response.</li>
+                <li>Supports digestion and healthy bowel movement.</li>
+                <li>Helps support appetite and digestive wellness.</li>
+                <li>Supports mood and emotional well-being.</li>
+                <li>Promotes relaxation and supports restful sleep.</li>
+                <li>Traditionally valued for its calming and balancing effects on the nervous system.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Sachets in a Box; 3g each</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Bhaang (<i>Cannabis sativa</i>) Powder</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Vijaya-Ghrita-by-Vedi-Herbals.webp" alt="Vijaya Ghrita">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">RASAYANA & MEDHYA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">A2 Desi Cow Ghee</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Vijaya Ghrita</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Deep Cellular Rejuvenation & Cognitive Nourishment</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports the body’s natural defenses and overall wellness.</li>
+                <li>Promotes healthy ageing and rejuvenation.</li>
+                <li>Helps manage stress and supports emotional well-being.</li>
+                <li>Supports cognitive function and memory.</li>
+                <li>Aids healthy digestion, nutrient absorption, and waste elimination.</li>
+                <li>Promotes healthy skin, hair, and nails.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">186ml in a Jar</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Bhaang (<i>Cannabis sativa</i>) powder, Desi Cow ghee, A2 milk</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Bilvadi.webp" alt="Bilvadi Churna">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">GRAHI & DEEPANA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">GI Equilibrium</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Bilvadi Churna</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Bowel Frequency & Digestion Support</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps reduce the frequency of loose stools and supports healthy bowel function.</li>
+                <li>Supports individuals experiencing IBS, abdominal discomfort, gas, and bloating.</li>
+                <li>Helps support digestive health during Shigella-related dysentery.</li>
+                <li>Helps reduce excessive mucus in stools.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Sachets in a Box; 3g each</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Bael Fruit, Sunthi, Bhaang (<i>Cannabis sativa</i>), Dhataki</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="JATIPHALADI CHRNA.webp" alt="Jatiphaladi Churna">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">KAPHA-VATA HARA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Respiratory & GI Wellness</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Jatiphaladi Churna</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Cough, Cold & Chronic Diarrhoea Relief</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps relieve symptoms of cough, cold, and nasal congestion.</li>
+                <li>Supports digestive health and helps manage chronic diarrhoea and sprue syndrome.</li>
+                <li>Supports respiratory health and helps ease breathing difficulties associated with asthma.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Sachets in a Box; 3g each</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Jatiphala, Lavang, Elaichi, Twak, Nagkesar, Bhaang (<i>Cannabis sativa</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Haridrakhand-Effective-Treatment-for-Itching-Hives-and-Fungal-Infections.webp" alt="Haridrakhand">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">KANDUGHNA & KUSHTHAGHNA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">High-Curcumin Turmeric</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Haridrakhand</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Allergic Skin Relief & Radiant Complexion</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Made with high-curcumin turmeric, processed through traditional Ayurvedic methods in small batches.</li>
+                <li>Supports healthy skin and helps relieve itching and irritation.</li>
+                <li>Helps manage skin concerns such as allergic hives, dermatitis, and melasma.</li>
+                <li>Supports relief from allergic rhinitis.</li>
+                <li>Promotes healthy, radiant, and revitalized skin.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">150g Can</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Haridra (<i>Curcuma longa</i>), Sunthi, Marica, Pippali, Twak Elaichi etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="KAMESHWAR MODAKA CAN.webp" alt="Kameswar Modaka Can">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Can</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Kameshwar-Modaka-Ayurvedic-Immune-Booster-Aphrodisiac.webp" alt="Kameshwar Modaka Box">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Box</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Can"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Box"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">VRIYYA & BALYA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Immune & Reproductive</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Kameswar Modaka</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Energy, Endurance & Vitality Support</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports energy, endurance, and overall vitality.</li>
+                <li>Traditionally used to support sexual wellness and intimacy.</li>
+                <li>Helps support healthy sexual function and performance.</li>
+                <li>Supports overall immunity and reproductive wellness.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">150g Can, 15 Sachets in a Box; 5g each</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Ashwagandha (<i>Withania somnifera</i>), Shatavari (<i>Asparagus racemosus</i>), Gokshura (<i>Tribulus terrestris</i>), Safed Musli etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Sarpagandha .webp" alt="Sarpagandha Ghanvati">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">NIDRA & RAKTACHAPA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Natural Sleep & BP</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Sarpagandha Ghanvati</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Neuro-Vascular Equilibrium & Deep Rest</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps support restful sleep and manage symptoms of insomnia.</li>
+                <li>Supports healthy blood pressure levels.</li>
+                <li>Supports emotional and psychological well-being.</li>
+                <li>Traditionally used to support the body’s natural detoxification processes.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Sarpagandha (<i>Rauvolfia serpentina</i>), Jatamansi, Khurasani, Bhaang (<i>Cannabis sativa</i>) etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Vijayadi-Vati-Cannabis-Based-Relief-for-Menstrual-Pain.webp" alt="Vijayadi Vati">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">VATA SHASTRA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Menstrual Comfort</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Vijayadi Vati</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Vata Circulation & Menstrual Balance</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports healthy blood circulation and helps maintain Vata Dosha balance.</li>
+                <li>Helps relieve discomfort associated with lower back pain, headaches, breast tenderness, reduced appetite, nausea, and vomiting.</li>
+                <li>Supports the body’s natural inflammatory response.</li>
+                <li>Helps address emotional and psychological factors associated with menstrual discomfort.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Bhaang (<i>Cannabis sativa</i>), Ghrita Kumari, Apamarga, Kamala kakadi etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Vijaya-Churna-by-Vedi-Herbals-Natural-Cannabis-Leaf-Powder.jpg" alt="Vijaya Churna">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">VATA SHOOLA HARA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Pure Botanical Powder</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Vijaya Churna</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Pain Support, Healthy Digestion & Nerve Calming</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps relieve mild to acute pain associated with fibromyalgia, sciatica, arthritis, and related discomforts.</li>
+                <li>Supports the body’s natural inflammatory response.</li>
+                <li>Supports digestion and healthy bowel movement.</li>
+                <li>Helps support appetite and digestive wellness.</li>
+                <li>Supports mood and emotional well-being.</li>
+                <li>Promotes relaxation and supports restful sleep.</li>
+                <li>Traditionally valued for its calming and balancing effects on the nervous system.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Sachets in a Box; 3g each</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Bhaang (<i>Cannabis sativa</i>) Powder</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Vijaya-Ghrita-by-Vedi-Herbals.webp" alt="Vijaya Ghrita">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">RASAYANA & MEDHYA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">A2 Desi Cow Ghee</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Vijaya Ghrita</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Deep Cellular Rejuvenation & Cognitive Nourishment</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports the body’s natural defenses and overall wellness.</li>
+                <li>Promotes healthy ageing and rejuvenation.</li>
+                <li>Helps manage stress and supports emotional well-being.</li>
+                <li>Supports cognitive function and memory.</li>
+                <li>Aids healthy digestion, nutrient absorption, and waste elimination.</li>
+                <li>Promotes healthy skin, hair, and nails.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">186ml in a Jar</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Bhaang (<i>Cannabis sativa</i>) powder, Desi Cow ghee, A2 milk</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Anona-Graviola-Antioxidant-Supplement-for-Immunity.webp" alt="Anona">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">IMMUNO-BOOST</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Graviola Fruit</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Anona (<i>Annona muricata</i>)</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Antioxidant Defense & Cellular Health</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Rich in Vitamin C to support immune health.</li>
+                <li>Supports healthy digestion and helps reduce bloating.</li>
+                <li>Supports healthy cholesterol levels and cardiovascular wellness.</li>
+                <li>May help support the body during chemotherapy-related side effects.</li>
+                <li>Contains naturally occurring acetogenins, which are being studied for their potential anti-proliferative properties.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 sachets in a Box; 5g each</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Graviola fruit powder (<i>Annona muricata</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Arjuna-Cardiovascular-Support-Tablet-Antioxidant.webp" alt="Arjuna">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">HRIDAYA SHASTRA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">20% Polyphenols</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Arjuna (<i>Terminalia arjuna</i>)</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Cardiovascular Health & Blood Pressure Support</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 20% polyphenols.</li>
+                <li>Supports healthy heart rhythm and cholesterol levels.</li>
+                <li>Promotes healthy blood circulation and cardiovascular wellness.</li>
+                <li>Supports healthy blood pressure levels.</li>
+                <li>Helps reduce urinary frequency and supports urinary health.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Arjuna Bark Extract (<i>Terminalia arjuna</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Ashwagandha-Tablet-for-Vital.webp" alt="Ashwagandha Tablet">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Tablet</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Organic_Ashwagandha_Powder_by_Vedi_Herbals_-_Ayurvedic_Super_Herb.webp" alt="Ashwagandha Churna">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Churna</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Tablet"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Churna"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">RASAYANA & BALYA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">3% Withanolides</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Ashwagandha (<i>Withania somnifera</i>) Tablets & Churna</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Stress Response & Stamina Enhancement</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 3% withanolides for consistent quality.</li>
+                <li>Supports the body’s natural response to stress and promotes relaxation.</li>
+                <li>Enhances vitality, stamina, and overall well-being.</li>
+                <li>Supports physical and mental performance.</li>
+                <li>Helps support a healthy inflammatory response.</li>
+                <li>Supports balanced neuroendocrine function.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each), 150g Can</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Ashwagandha Roots Extract (<i>Withania somnifera</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Ayurcalm-Ayurvedic-Cough-Syrup-Relief-For-Throat.webp" alt="Ayurcalm Cough Syrup">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">KASA-HARA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Alcohol & Codeine Free</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Ayurcalm | Ayurvedic Cough Syrup</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Quick Relief From Dry & Wet Cough</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Made with natural herbal ingredients to soothe cough and support respiratory health.</li>
+                <li>Free from added chemicals, codeine, alcohol, and camphor.</li>
+                <li>Non-addictive and non-drowsy formula.</li>
+                <li>Gentle formula suitable for children.</li>
+                <li>Helps soothe throat irritation and support relief from cough.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">100ml in a Bottle</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Marica, Bhringaraj, Tejpatta, Sunthi etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Bonewiz-Hadjod-Capsules-Natural-Bone-Protector-Healer.webp" alt="Bonewiz Hadjod">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">ASTHI-SADHANAKARA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">5% Ketosterones</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Bonewiz | Hadjod (<i>Cissus quadrangularis</i>)</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Bone Integrity & Joint Mobility</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 5% ketosterones for consistent quality.</li>
+                <li>Supports bone and joint health, including arthritis-related discomfort.</li>
+                <li>Helps strengthen bones and support joint mobility.</li>
+                <li>Helps ease joint pain, stiffness, and swelling.</li>
+                <li>Rich in antioxidant properties to help protect against oxidative stress.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">60 Capsules in a Bottle (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Hadjod Stem Extract (<i>Cissus quadrangularis</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Brahmi-Tablet-Memory-and-Mental-Function-Booster.webp" alt="Brahmi Tablet">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Tablet</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Brahmi-Tablet-Memory-and-Mental-Function-Booster-1.webp" alt="Brahmi Powder">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Powder</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Tablet"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Powder"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">MEDHYA RASAYANA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">10% Bacosides</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Brahmi (<i>Bacopa monnieri</i>) Tablets & Powder</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Memory, Focus & Neurological Health</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 10% bacosides for consistent quality.</li>
+                <li>Supports memory, focus, concentration, and cognitive function.</li>
+                <li>Promotes overall brain and neurological health.</li>
+                <li>Supports mental well-being and cognitive performance.</li>
+                <li>Traditionally used to support speech and developmental functions in children.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each), 150g Can</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Brahmi Whole Plant Extract (<i>Bacopa monnieri</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Femacin-Ayurvedic-Womens-Health-Tonic-for-Hormonal-Balance.webp" alt="Femacin">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">STREE RASAYANA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Phytoestrogen Tonic</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Femacin | Women's Health Tonic</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Hormonal Balance & Reproductive Vitality</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports healthy hormonal balance and helps ease PMS symptoms such as mood changes, cramps, and irritability.</li>
+                <li>Supports menopausal wellness with naturally occurring phytoestrogens from Ashoka bark.</li>
+                <li>Supports female fertility and healthy ovulation.</li>
+                <li>Helps support energy, vitality, and stress management.</li>
+                <li>Supports libido and overall reproductive wellness.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">210ml in a Bottle</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Shatavari (<i>Asparagus racemosus</i>), Ashwagandha (<i>Withania somnifera</i>), Asoka, Nagkeshar etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Gokshura-Tablet-Herbal-Supplement-Workout-Recovery.webp" alt="Gokshura">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">VREESHAN & MUTRA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">25% Saponins</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Gokshura (<i>Tribulus terrestris</i>)</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Urinary Flow & Reproductive Vigor</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Contains 25% saponins for consistent potency.</li>
+                <li>Supports healthy testosterone levels and reproductive wellness.</li>
+                <li>Supports sexual health, desire, and vitality in men and women.</li>
+                <li>Supports healthy ovulation and sperm production.</li>
+                <li>Promotes healthy urinary flow and supports bladder comfort.</li>
+                <li>Supports fluid balance and healthy urinary function.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">60 Tablets In A Bottle (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Gokshura Fruit Extract (<i>Tribulus terrestris</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="Shop-Gudmar-Leaf-Extract-Tablet-Insulin-Production.webp" alt="Gudmar Leaf Extract Tablet">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Tablet</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Shop-Gudmar-Leaf-Extract-Tablet-Insulin-Production-1.webp" alt="Gudmar Leaf Extract Pack">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Pack</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Tablet"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Pack"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">MADHUMEHA SHASTRA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">40% Gymnemic Acids</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Gudmar (<i>Gymnema sylvestre</i>) Tablet</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Glucose Balance & Craving Control</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 40% gymnemic acids for consistent quality.</li>
+                <li>Supports healthy blood glucose and urine sugar levels.</li>
+                <li>Supports healthy pancreatic function and glucose metabolism.</li>
+                <li>Helps manage sugar cravings by temporarily reducing sweet taste perception.</li>
+                <li>Supports healthy metabolism and triglyceride levels.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Gudmar Leaf Extract (<i>Gymnema sylvestre</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Shop-_Guduchi-Giloy-Capsule-Health-Supplement-White-Blood-Cells.webp" alt="Guduchi Giloy">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">IMMUNOMODULATOR</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">4% Bitter Compounds</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Guduchi (Giloy) (<i>Tinospora cordifolia</i>)</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Immune Response & Liver Detoxification</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 4% bitter compounds for consistent quality.</li>
+                <li>Supports immune function and healthy antibody response.</li>
+                <li>Supports the body’s natural defenses against infections.</li>
+                <li>Supports healthy liver, kidney, and cardiovascular function.</li>
+                <li>Traditionally used to support liver and spleen health.</li>
+                <li>Supports urinary tract health.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">10 Capsules in a Strip (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Guduchi Stem Extract (<i>Tinospora cordifolia</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="guggul.webp" alt="Guggul Extract">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">MEDOHARA & SHOOLA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">3% Guggulsterones</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Guggul (<i>Commiphora wightii</i>) Extract</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Lipid Management & Joint Comfort</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 3% guggulsterones for consistent quality.</li>
+                <li>Supports healthy cholesterol levels and cardiovascular wellness.</li>
+                <li>Helps maintain a healthy inflammatory response.</li>
+                <li>Supports joint comfort and mobility.</li>
+                <li>Supports healthy weight management.</li>
+                <li>Traditionally used to support detoxification and rejuvenation.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Guggul Gum Extract (<i>Commiphora wightii</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Kapikachu-Capsule-Energy-Booster-and-Cognitive_Enhancer.webp" alt="Kapikachu">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">VREECHAN & NEURO</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">10% L-DOPA</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Kapikachu (<i>Mucuna pruriens</i>) Capsule</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Dopamine Support & Vitality</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 10% L-DOPA for consistent quality.</li>
+                <li>Supports healthy dopamine levels and neurological function.</li>
+                <li>Helps promote energy, stamina, and vitality.</li>
+                <li>Supports male and female reproductive wellness.</li>
+                <li>Supports healthy reproductive hormone balance and ovulatory function.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">60 Capsules In a Bottle</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Kapikachu Seeds Extract (<i>Mucuna pruriens</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="uy-Neem-Capsule-Natural-Blood-Purifier-Immune-Booster-Antioxidant-Properties.webp" alt="Neem Capsules">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">RAKTASHODHAKA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">3% Bitter Compounds</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Neem (<i>Azadirachta indica</i>) Capsules</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Blood Purification & Skin Clarifying</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 3% bitter compounds for consistent quality.</li>
+                <li>Provides antioxidant support against free-radical damage.</li>
+                <li>Supports skin health and helps manage concerns such as eczema, scabies, ringworm, and dermatitis.</li>
+                <li>Supports the body’s natural defenses against microbial infections.</li>
+                <li>Supports liver health and natural detoxification.</li>
+                <li>Traditionally valued for its blood-purifying properties.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">60 Capsules in a Bottle (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Neem Leaf Extract (<i>Azadirachta indica</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-NVD3-50000IU-Natural-Vitamin-D3-Supplement.webp" alt="NVD3 5000IU Bottle">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Bottle</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Shop-NVD3-50000IU-Natural-Vitamin-D3-Supplement.webp" alt="NVD3 5000IU Pack">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Pack</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Bottle"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Pack"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">PLANT VITAMIN D3</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Stone Flower Sourced</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">NVD3 | 5000IU Natural Vitamin D3</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Bone Strength & Immune Function (Daily)</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Made with naturally sourced Stone Flower.</li>
+                <li>100% vegetarian capsule, free from preservatives and toxic chemicals.</li>
+                <li>Supports healthy bones, muscles, and nerves.</li>
+                <li>Supports cognitive function and overall wellness.</li>
+                <li>Promotes healthy teeth and gums.</li>
+                <li>Supports healthy immune function.</li>
+                <li>Daily Consumption.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">60 Capsules in a Bottle (50mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Saileya (<i>Parmelia perlata</i>) Extract</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-NVD3-50000IU-Natural-Vitamin-D3-Supplement-1.webp" alt="NVD3+ 50000IU">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">HIGH POTENCY D3</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Weekly Therapeutic Dosage</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">NVD3+ | 50000IU Natural Vitamin D3</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Bone Density & Neurological Support (Weekly)</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Made with naturally sourced Stone Flower.</li>
+                <li>100% vegetarian capsule, free from preservatives and toxic chemicals.</li>
+                <li>Supports healthy bones, muscles, and nerves.</li>
+                <li>Supports cognitive function and overall wellness.</li>
+                <li>Promotes healthy teeth and gums.</li>
+                <li>Supports healthy immune function.</li>
+                <li>Weekly Consumption.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">12 Capsules in a Box (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Saileya (<i>Parmelia perlata</i>) Extract</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="PUDIN-PUNCH-Herbal-Remedy-for-Acidity-and-Upset-Stomach.webp" alt="Pudin Punch">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">PACHANA & ROCHANA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Herbal Digestive Refresher</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Pudin Punch</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Acidity Relief & Gastrointestinal Comfort</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports healthy digestion and helps relieve gas, bloating, indigestion, and nausea.</li>
+                <li>Supports respiratory health and helps ease congestion, cough, and cold symptoms.</li>
+                <li>Helps freshen breath and supports oral hygiene.</li>
+                <li>Contains antioxidant-rich herbs with Vitamins A and C to support overall wellness.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">60gm in a Can</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Pudina Leaves, Guava Leaves, Sunthi, etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Shallaki-Capsule-for-Natural-Pain-Management.webp" alt="Shallaki">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">SANDHI SHOOLA HARA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Standardized Boswellic Acids</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Shallaki (<i>Boswellia serrata</i>)</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Joint Mobility & Intestinal Health</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to boswellic acids for consistent quality.</li>
+                <li>Supports joint health and helps ease arthritis-related pain and discomfort.</li>
+                <li>Supports digestive and intestinal health in conditions such as Crohn’s disease and ulcerative colitis.</li>
+                <li>Helps relieve pain and supports recovery during viral infections.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">10 Capsules in a Strip (500mg each)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Shallaki Oleo-gum extract (<i>Boswellia serrata</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Shatavari-Tablet-Ayurvedic-Womens-Health-Supplement.webp" alt="Shatavari Tablet">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Tablet</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="shatavaripowder_v2.webp" alt="Shatavari Powder">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Powder</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Tablet"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Powder"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">STREE RASAYANA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Female Rejuvenation</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Shatavari (<i>Asparagus racemosus</i>) Tablet & Powder</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Hormonal Equilibrium & Nursing Wellness</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports hormonal balance and female reproductive wellness.</li>
+                <li>Supports fertility and prepares the body for conception.</li>
+                <li>Traditionally used to support healthy lactation in nursing mothers.</li>
+                <li>Helps ease common menopausal discomforts such as hot flashes, night sweats, and vaginal dryness.</li>
+                <li>Nourishes and supports the female reproductive system.</li>
+                <li>Supports a healthy inflammatory response.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">150g Can, 90 Tablets in a Bottle</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Shatavari Root Extract (<i>Asparagus racemosus</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Triphala-Extract-Tablet-Natural-Constipation-Relief.webp" alt="Triphala Extract Tablet">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Tablet</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Triphala-Churna-Natural-Antioxidant-Colon-Cleanser.webp" alt="Triphala Churna">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Churna</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="1679735194882.jpeg" alt="Triphala Supplement">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Triphala</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Tablet"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Churna"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 2)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Triphala"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">ANULOMANA & PURISHA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Three Superfruits</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Triphala Extract Tablet & Churna</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Gentle Colon Cleansing & Antioxidant Care</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Supports healthy digestion and regular bowel movements.</li>
+                <li>Helps relieve occasional and chronic constipation.</li>
+                <li>Supports healthy blood sugar and lipid levels.</li>
+                <li>Aids healthy weight management.</li>
+                <li>Supports liver and intestinal wellness.</li>
+                <li>Rich in antioxidants and Vitamin C to support overall wellness.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">150g Can, 90 Tablets in a Bottle</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Haritaki, Bibhitaki, Amalaki</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Hempcool_V2.webp" alt="Hempcool">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">PITTA HARA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Cooling Beverage</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Hempcool</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Internal Cooling & Gastric Comfort</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps cool the body and support internal balance.</li>
+                <li>Helps relieve acidity, gastric burning, and digestive discomfort.</li>
+                <li>Supports healthy digestion and helps reduce gas and bloating.</li>
+                <li>Helps soothe heat-related irritation and supports gut comfort.</li>
+                <li>Supports hydration and overall vitality.</li>
+                <li>Helps promote a feeling of lightness and comfort.</li>
+                <li>Supports relaxation and emotional balance.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Sachets in a Box; 5g Each</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Almonds, Muskmelon seeds, Hempseeds (<i>Cannabis sativa</i>), Elaichi, Rose Petals etc.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Hempseedoil.webp" alt="Hempseed Oil">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">OMEGA 3:1 BALANCE</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Virgin Coldpressed Oil</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Hempseed Oil – Coldpressed</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Heart, Metabolic & Skin Health</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Rich in Omega-3 & Omega-6 fatty acids with a natural 3:1 balance.</li>
+                <li>Supports heart, metabolic, skin, and nervous system health.</li>
+                <li>Helps maintain healthy inflammatory balance.</li>
+                <li>Supports skin hydration and barrier health.</li>
+                <li>Provides essential plant-based fats and antioxidant support.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">200ml In a Bottle</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Cold-pressed hempseed oil (<i>Cannabis sativa</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Unscented-Liquid-Castile-Soap-Hempseed-Oil-Vegan-Natural.webp" alt="Unscented Liquid Soap">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Unscented</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Hempseed-Oil-Cedarwood-Patchouli-Liquid-Castile-Soap-Vegan.webp" alt="Cedarwood & Patchouli Liquid Soap">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Cedarwood & Patchouli</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Lavender-Liquid-Castile-Soap-Hempseed-Oil-Organic-Natural.webp" alt="Lavender Liquid Soap">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Lavender</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Unscented"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Cedarwood & Patchouli"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 2)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Lavender"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">VIRGIN PLANT OILS</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Handmade Soap</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Castile Liquid Soap</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">100% Plant-Based Cleansing & Hydration</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Olive Oil – Helps moisturize and protect dry, cracked skin.</li>
+                <li>Hemp Seed Oil – Nourishes dry skin without clogging pores and helps soothe itchiness.</li>
+                <li>Coconut Oil – Creates a rich lather and effectively cleanses dirt and impurities.</li>
+                <li>Castor Oil – Helps soften and hydrate the skin.</li>
+                <li>Natural Glycerin – Retained during saponification to help keep skin soft and moisturized.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">280ml In a Bottle & 50ml In a Bottle (Unscented, Lime & Lemon, Cedarwood & Patchouli, Lavender, Holy Basil)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Olive Oil, Hemp Seed Oil (<i>Cannabis sativa</i>), Coconut Oil, Castor Oil, Glycerin</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Natural-Unscented-Castile-Soap-Vedi-Organic.webp" alt="Unscented Bar Soap">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Unscented</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Hempseed-Oil-Cedarwood-Patchouli-Soap-Organic-Natural.webp" alt="Cedarwood & Patchouli Bar Soap">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Cedarwood & Patchouli</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Lavender-Bar-Soap-Hempseed-Oil-Skin-Cleansing.webp" alt="Lavender Bar Soap">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Lavender</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Lime-Lemon-Bar-Soap-Hempseed-Oil-Skin-Cleansing.webp" alt="Lime & Lemon Bar Soap">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Lime & Lemon</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Natural-Tulsi-Castile-Soap-Vedi-Organic.webp" alt="Tulsi Bar Soap">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Tulsi</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Unscented"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Cedarwood & Patchouli"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 2)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Lavender"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 3)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Lime & Lemon"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 4)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Tulsi"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">COLD-PROCESSED</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Fragrance-Free & Gentle</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Castile Bar Soap</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Cold-Process Bath Soap for Sensitive Skin</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Natural Glycerin – Helps hydrate and nourish the skin.</li>
+                <li>Olive Oil – Moisturizes and helps protect dry, cracked skin.</li>
+                <li>Hemp Seed Oil – Nourishes and rejuvenates without clogging pores.</li>
+                <li>Coconut Oil – Creates a rich lather while gently cleansing the skin.</li>
+                <li>Fragrance-Free & Gentle – Free from artificial fragrances and harsh/toxic chemicals.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">100gm Bar Soap (Unscented, Lime & Lemon, Cedarwood & Patchouli, Lavender, Holy Basil)</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Olive Oil, Hemp Seed Oil (<i>Cannabis sativa</i>), Coconut Oil, Glycerin</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Buy-Organic-Aloe-Vera-Hemp-Cream-Vitamin-E-Nourishment.webp" alt="Aloe & Hemp Cream">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">DEEP HYDRATION</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Vitamin E Nourishment</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Aloe Vera & Hemp Moisturizing Cream</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Skin Barrier Repair & Firmness Support</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Deep Hydration & Nourishment – Helps replenish moisture and support the skin barrier.</li>
+                <li>Healthy, Youthful Skin – Improves skin texture, elasticity and firmness while reducing fine lines.</li>
+                <li>Soothes & Calms – Helps reduce skin irritation and inflammation.</li>
+                <li>Hemp Seed Oil – Nourishes skin and supports elasticity.</li>
+                <li>Lavender Essential Oil – Provides a calming, relaxing experience.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">50gm In A Jar</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Aloe Vera, Hemp Seed Oil (<i>Cannabis sativa</i>), Lavender Essential Oil, Vitamin E</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" data-active-slide="0" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            
+            <!-- Carousel Track -->
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img class="image-preview" src="Buy-Ashwagandha-Tablet-for-Vital.webp" alt="Ashwagandha Tablet">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Tablet</span>
+              </div>
+              <div class="carousel-slide">
+                <img class="image-preview" src="Organic_Ashwagandha_Powder_by_Vedi_Herbals_-_Ayurvedic_Super_Herb.webp" alt="Ashwagandha Churna">
+                <span class="absolute top-3 left-3 bg-[#1b4332]/85 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-subheading z-20 shadow-md">Churna</span>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, -1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Previous Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" onclick="event.stopPropagation(); changeCarouselSlide(this, 1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#1b4332] flex items-center justify-center shadow-lg border border-[#e7e3d8] transition-all duration-200 z-30 opacity-80 hover:scale-105 active:scale-95" aria-label="Next Variant">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 0)" class="carousel-dot w-5 h-2 rounded-full bg-white transition-all duration-300" aria-label="Tablet"></button>
+              <button type="button" onclick="event.stopPropagation(); goToCarouselSlide(this, 1)" class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white/90 transition-all duration-300" aria-label="Churna"></button>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">RASAYANA & BALYA</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">3% Withanolides</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Ashwagandha (<i>Withania somnifera</i>) Tablets & Churna</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Stress Response & Stamina Enhancement</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Standardized to 3% withanolides for consistent quality.</li>
+                <li>Supports the body’s natural response to stress and promotes relaxation.</li>
+                <li>Enhances vitality, stamina, and overall well-being.</li>
+                <li>Supports physical and mental performance.</li>
+                <li>Helps support a healthy inflammatory response.</li>
+                <li>Supports balanced neuroendocrine function.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">15 Tablets In A Strip (500mg each), 150g Can</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Ashwagandha Roots Extract (<i>Withania somnifera</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="ALOE ROSE.webp" alt="Aloe Vera Gel Rose">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">COOLING BOTANICAL</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Pure Rose Water</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Aloe Vera Gel with Rose</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Skin Softening & Hydration Refresh</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps maintain skin hydration.</li>
+                <li>Leaves skin feeling soft and refreshed.</li>
+                <li>Provides a soothing, cooling feel.</li>
+                <li>Lightweight, non-greasy application.</li>
+                <li>Suitable for everyday use.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">50ml In A Jar</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Pure Aloe Vera Gel, Rose Distillate</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="ALOE SAFFRONwebp.webp" alt="Aloe Vera Gel Saffron">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">RADIANCE GEL</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Kashmiri Saffron</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Aloe Vera Gel with Saffron</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Skin Smoothness & Glow Revitalization</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Helps hydrate and soften the skin.</li>
+                <li>Helps improve the appearance of dull, tired-looking skin.</li>
+                <li>Leaves skin feeling refreshed and smooth.</li>
+                <li>Lightweight and non-greasy.</li>
+                <li>Suitable for everyday use.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">50ml In A Jar</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Pure Aloe Vera Gel, Saffron Extract</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="Hempseedoil.webp" alt="Hempseed Oil">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">OMEGA 3:1 BALANCE</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Virgin Coldpressed Oil</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Hempseed Oil – Coldpressed</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Heart, Metabolic & Skin Health</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Rich in Omega-3 & Omega-6 fatty acids with a natural 3:1 balance.</li>
+                <li>Supports heart, metabolic, skin, and nervous system health.</li>
+                <li>Helps maintain healthy inflammatory balance.</li>
+                <li>Supports skin hydration and barrier health.</li>
+                <li>Provides essential plant-based fats and antioxidant support.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">200ml In a Bottle</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Cold-pressed hempseed oil (<i>Cannabis sativa</i>)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="product-card bg-white border border-[#e7e3d8] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 w-full product-image-container border-b lg:border-b-0 lg:border-r border-[#e7e3d8] relative group overflow-hidden" onclick="triggerUpload(this)">
+            <input type="file" accept="image/*" class="file-input hidden" onchange="previewUploadedImage(this)">
+            <img class="image-preview" src="conditioner.webp" alt="Cherry Blossom Conditioner">
+            <div class="image-drop-target p-4 text-center" style="display:none;">
+              <svg class="w-16 h-16 text-[#1b4332]/30 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+              <span class="text-xs font-bold text-[#1b4332] uppercase tracking-wider font-subheading block">Click to Add Photo</span>
+              <span class="text-[10px] text-stone-400 font-body">1:1 Square &bull; Edge-to-Edge</span>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 bg-[#e2ede7] text-[#1b4332] text-[11px] font-bold uppercase tracking-wider rounded-md font-subheading">DEEP CONDITIONING</span>
+                <span class="px-3 py-1 bg-[#f5ece3] text-[#8d5336] text-[11px] font-semibold rounded-md font-subheading">Mango Butter Nourishment</span>
+              </div>
+              <h3 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-[#1b4332] tracking-wide leading-none mb-1">Cherry Blossom Hair Conditioner</h3>
+              <p class="text-xs sm:text-sm font-bold text-stone-500 font-subheading mb-4">Silky Smoothness & Frizz Management</p>
+              
+              <h4 class="text-xs font-bold uppercase tracking-wider text-[#1b4332] font-subheading mb-2">CLINICAL & SUPPORTIVE INDICATIONS:</h4>
+              <ul class="indication-list text-xs text-stone-700 font-body">
+                <li>Deep Conditioning – Helps replenish moisture and soften dry-feeling hair.</li>
+                <li>Smooth & Manageable – Helps reduce frizz and makes hair easier to comb.</li>
+                <li>Mango Butter – Provides nourishing and conditioning care.</li>
+                <li>Soft, Silky Finish – Helps improve hair feel and smoothness.</li>
+                <li>Natural Cherry Blossom Fragrance – Leaves hair delicately scented.</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-[#f6f8f7] border border-stone-100 text-xs space-y-2.5 font-body">
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Available Variant:</strong>
+                <span class="text-stone-600">200ml In a Bottle</span>
+              </div>
+              <div>
+                <strong class="block font-bold text-[#1b4332] font-subheading mb-0.5">Key Ingredients:</strong>
+                <span class="text-stone-600">Mango Butter, Cherry Blossom Extract, Plant Conditioners</span>
+              </div>
+            </div>
+          </div>
+        </article>
