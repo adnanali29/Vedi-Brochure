@@ -48,8 +48,8 @@ export const PRODUCTS: Product[] = [
     keyIngredients: 'Bhaang (Cannabis sativa), Coconut Oil, Natural Flavorings',
     images: [
       '/assets/Cannaflam.webp',
-      '/assets/Cannaflam +.webp',
-      '/assets/Buy-Cannaflam-Oil-Reduces-Inflammation-and-Boosts-Immunity.webp'
+      '/assets/Cannaflam-Plus.webp',
+      '/assets/Cannaflam-Oil.webp'
     ]
   },
   {
@@ -74,8 +74,8 @@ export const PRODUCTS: Product[] = [
     keyIngredients: 'Bhaang (Cannabis sativa), Coconut Oil, Natural Flavorings',
     images: [
       '/assets/Cannapain.webp',
-      '/assets/Cannapain +.webp',
-      '/assets/Cannapain oil.webp'
+      '/assets/Cannapain-Plus.webp',
+      '/assets/Cannapain-Oil.webp'
     ]
   },
   {
@@ -100,8 +100,8 @@ export const PRODUCTS: Product[] = [
     keyIngredients: 'Bhaang (Cannabis sativa), Coconut Oil, Natural Flavorings',
     images: [
       '/assets/Cannaron.webp',
-      '/assets/Cannaron +.webp',
-      '/assets/Cannaron oil.webp'
+      '/assets/Cannaron-Plus.webp',
+      '/assets/Cannaron-Oil.webp'
     ]
   },
 
