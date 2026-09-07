@@ -9,6 +9,22 @@ interface ProductCardProps {
   onSelect: (product: Product) => void;
 }
 
+// Helper to automatically render botanical names in parentheses with italics
+export const renderWithItalicBotanicals = (text: string) => {
+  if (!text) return null;
+  const parts = text.split(/(\([^)]+\))/g);
+  return parts.map((part, idx) => {
+    if (part.startsWith('(') && part.endsWith(')')) {
+      return (
+        <em key={idx} style={{ fontStyle: 'italic', fontWeight: 'inherit' }}>
+          {part}
+        </em>
+      );
+    }
+    return part;
+  });
+};
+
 export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
@@ -85,8 +101,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
             ))}
           </div>
 
-          {/* Product Title */}
-          <h3 className="card-product-title">{product.title}</h3>
+          {/* Product Title with Italic Botanical Name */}
+          <h3 className="card-product-title">{renderWithItalicBotanicals(product.title)}</h3>
+          {product.botanicalName && (
+            <div className="card-botanical-name">
+              Botanical: <em>{product.botanicalName}</em>
+            </div>
+          )}
           {product.tagline && <div className="card-tagline">{product.tagline}</div>}
 
           {/* Rx Warning notice if applicable */}
@@ -116,7 +137,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
           </div>
           <div className="inset-line">
             <span className="inset-label">Key Ingredients:</span>
-            <span className="inset-val">{product.keyIngredients}</span>
+            <span className="inset-val">{renderWithItalicBotanicals(product.keyIngredients)}</span>
           </div>
         </div>
       </div>

@@ -46,7 +46,11 @@ export const PRODUCTS: Product[] = [
     ],
     variant: '125mg & 250mg Capsules, 13ml & 30ml Oil',
     keyIngredients: 'Bhaang (Cannabis sativa), Coconut Oil, Natural Flavorings',
-    images: ['/assets/Cannaflam.webp', '/assets/Cannaflam +.webp']
+    images: [
+      '/assets/Cannaflam.webp',
+      '/assets/Cannaflam +.webp',
+      '/assets/Buy-Cannaflam-Oil-Reduces-Inflammation-and-Boosts-Immunity.webp'
+    ]
   },
   {
     id: 'cannapain',
@@ -68,7 +72,11 @@ export const PRODUCTS: Product[] = [
     ],
     variant: '125mg & 250mg Capsules, 13ml & 30ml Oil',
     keyIngredients: 'Bhaang (Cannabis sativa), Coconut Oil, Natural Flavorings',
-    images: ['/assets/Cannapain.webp', '/assets/Cannapain +.webp', '/assets/Cannapain oil.webp']
+    images: [
+      '/assets/Cannapain.webp',
+      '/assets/Cannapain +.webp',
+      '/assets/Cannapain oil.webp'
+    ]
   },
   {
     id: 'cannaron',
@@ -90,7 +98,11 @@ export const PRODUCTS: Product[] = [
     ],
     variant: '125mg & 250mg Capsules, 13ml & 30ml Oil',
     keyIngredients: 'Bhaang (Cannabis sativa), Coconut Oil, Natural Flavorings',
-    images: ['/assets/Cannaron.webp', '/assets/Cannaron +.webp', '/assets/Cannaron oil.webp']
+    images: [
+      '/assets/Cannaron.webp',
+      '/assets/Cannaron +.webp',
+      '/assets/Cannaron oil.webp'
+    ]
   },
 
   // --- 01. AYURVEDIC MEDICINES: CLASSICAL AYURVEDA ---
@@ -99,6 +111,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '01-ayurvedic',
     subCategory: 'CLASSICAL AYURVEDA',
     title: 'Bilvadi Churna',
+    botanicalName: 'Aegle marmelos & Cannabis sativa',
     tagline: 'Bowel Health & Digestive Support',
     badges: ['GRAHANI CARE', 'Digestive Health'],
     indications: [
@@ -108,7 +121,7 @@ export const PRODUCTS: Product[] = [
       'Helps reduce excessive mucus in stools.'
     ],
     variant: '15 Sachets in a Box; 3g each',
-    keyIngredients: 'Bael Fruit, Sunthi, Bhaang, Dhataki',
+    keyIngredients: 'Bael Fruit, Sunthi, Bhaang (Cannabis sativa), Dhataki',
     images: ['/assets/Bilvadi.webp']
   },
   {
@@ -116,6 +129,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '01-ayurvedic',
     subCategory: 'CLASSICAL AYURVEDA',
     title: 'JATIPHALADI CHURNA',
+    botanicalName: 'Myristica fragrans & Cannabis sativa',
     tagline: 'Cough, Sprue & Respiratory Equilibrium',
     badges: ['PRANAVAHA & GRAHANI', 'Respiratory & Colon Support'],
     indications: [
@@ -124,7 +138,7 @@ export const PRODUCTS: Product[] = [
       'Supports respiratory health and helps ease breathing difficulties associated with asthma.'
     ],
     variant: '15 Sachets in a Box (3g each)',
-    keyIngredients: 'Jatiphala, Lavang, Elaichi, Twak, Nagkesar, Bhaang',
+    keyIngredients: 'Jatiphala, Lavang, Elaichi, Twak, Nagkesar, Bhaang (Cannabis sativa)',
     images: ['/assets/JATIPHALADI CHRNA.webp']
   },
   {
@@ -132,6 +146,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '01-ayurvedic',
     subCategory: 'CLASSICAL AYURVEDA',
     title: 'Haridrakhand',
+    botanicalName: 'Curcuma longa',
     tagline: 'High-Curcumin Skin & Respiratory Support',
     badges: ['TWAK & RHINITIS CARE', 'Skin & Allergy Support'],
     indications: [
@@ -142,7 +157,7 @@ export const PRODUCTS: Product[] = [
       'Promotes healthy, radiant, and revitalized skin.'
     ],
     variant: '150g Can',
-    keyIngredients: 'Haridra, Sunthi, Marica, Pippali, Twak, Elaichi etc.',
+    keyIngredients: 'Haridra (Curcuma longa), Sunthi, Marica, Pippali, Twak, Elaichi etc.',
     images: ['/assets/Buy-Haridrakhand-Effective-Treatment-for-Itching-Hives-and-Fungal-Infections.webp']
   },
   {
@@ -150,6 +165,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '01-ayurvedic',
     subCategory: 'CLASSICAL AYURVEDA',
     title: 'Kameswar Modaka',
+    botanicalName: 'Withania somnifera & Cannabis sativa',
     tagline: 'Vitality, Endurance & Reproductive Support',
     badges: ['VRSYA & BALYA', 'Energy & Intimacy Support'],
     indications: [
@@ -159,7 +175,7 @@ export const PRODUCTS: Product[] = [
       'Supports overall immunity and reproductive wellness.'
     ],
     variant: '150g Can / 15 Sachets in a Box (5g each)',
-    keyIngredients: 'Ashwagandha, Shatavari, Gokshura, Safed Musli etc.',
+    keyIngredients: 'Ashwagandha (Withania somnifera), Shatavari, Gokshura, Safed Musli etc.',
     images: ['/assets/KAMESHWAR MODAKA CAN.webp', '/assets/Buy-Kameshwar-Modaka-Ayurvedic-Immune-Booster-Aphrodisiac.webp']
   },
   {
@@ -167,6 +183,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '01-ayurvedic',
     subCategory: 'CLASSICAL AYURVEDA',
     title: 'Sarpagandha Ghanvati',
+    botanicalName: 'Rauvolfia serpentina & Cannabis sativa',
     tagline: 'Sleep, Blood Pressure & Emotional Balance',
     badges: ['NIDRA & RAKTAPITTA', 'Restful Sleep & BP Support'],
     indications: [
@@ -176,7 +193,7 @@ export const PRODUCTS: Product[] = [
       'Traditionally used to support the body’s natural detoxification processes.'
     ],
     variant: '15 Tablets In A Strip, 500mg Each',
-    keyIngredients: 'Sarpagandha, Jatamansi, Khurasani, Bhaang etc.',
+    keyIngredients: 'Sarpagandha (Rauvolfia serpentina), Jatamansi, Khurasani, Bhaang (Cannabis sativa)',
     images: ['/assets/Sarpagandha .webp']
   },
   {
@@ -184,6 +201,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '01-ayurvedic',
     subCategory: 'CLASSICAL AYURVEDA',
     title: 'Vijayadi Vati',
+    botanicalName: 'Cannabis sativa & Aloe barbadensis',
     tagline: 'Vata Balance & Menstrual Discomfort Relief',
     badges: ['VATA SHAMAKA', 'Circulation & Inflammatory Support'],
     indications: [
@@ -193,7 +211,7 @@ export const PRODUCTS: Product[] = [
       'Helps address emotional and psychological factors associated with menstrual discomfort.'
     ],
     variant: '15 Tablets In A Strip, 500mg Each',
-    keyIngredients: 'Bhaang, Ghrita Kumari, Apamarga, Kamala kakadi etc.',
+    keyIngredients: 'Bhaang (Cannabis sativa), Ghrita Kumari, Apamarga, Kamala kakadi etc.',
     images: ['/assets/Buy-Vijayadi-Vati-Cannabis-Based-Relief-for-Menstrual-Pain.webp']
   },
   {
@@ -201,6 +219,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '01-ayurvedic',
     subCategory: 'CLASSICAL AYURVEDA',
     title: 'Vijaya Churna',
+    botanicalName: 'Cannabis sativa',
     tagline: 'Pain Relief, Digestion & Mood Elevation',
     badges: ['SHOOLAHARA', 'Pain & Emotional Well-Being'],
     indications: [
@@ -221,6 +240,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '01-ayurvedic',
     subCategory: 'CLASSICAL AYURVEDA',
     title: 'Vijaya Ghrita',
+    botanicalName: 'Cannabis sativa',
     tagline: 'Rasayana Rejuvenation & Cognitive Support',
     badges: ['RASAYANA & MEDHYA', 'Rejuvenation & Ghee Infusion'],
     indications: [
@@ -232,7 +252,7 @@ export const PRODUCTS: Product[] = [
       'Promotes healthy skin, hair, and nails.'
     ],
     variant: '186ml in a Jar',
-    keyIngredients: 'Bhaang powder, Desi Cow ghee, A2 milk',
+    keyIngredients: 'Bhaang (Cannabis sativa) powder, Desi Cow ghee, A2 milk',
     images: ['/assets/Vijaya-Ghrita-by-Vedi-Herbals.webp']
   },
 
@@ -253,7 +273,7 @@ export const PRODUCTS: Product[] = [
       'Contains naturally occurring acetogenins, which are being studied for their potential anti-proliferative properties.'
     ],
     variant: '15 sachets in a Box; 5g each',
-    keyIngredients: 'Graviola fruit powder',
+    keyIngredients: 'Graviola (Annona muricata) fruit powder',
     images: ['/assets/Buy-Anona-Graviola-Antioxidant-Supplement-for-Immunity.webp']
   },
   {
@@ -272,7 +292,7 @@ export const PRODUCTS: Product[] = [
       'Helps reduce urinary frequency and supports urinary health.'
     ],
     variant: '15 Tablets In A Strip, 500mg Each',
-    keyIngredients: 'Arjuna Bark Extract',
+    keyIngredients: 'Arjuna (Terminalia arjuna) Bark Extract',
     images: ['/assets/Buy-Arjuna-Cardiovascular-Support-Tablet-Antioxidant.webp']
   },
   {
@@ -292,7 +312,7 @@ export const PRODUCTS: Product[] = [
       'Supports balanced neuroendocrine function.'
     ],
     variant: '15 Tablets In A Strip (500mg) / 150g Powder Can',
-    keyIngredients: 'Ashwagandha Roots Extract / Pure Root Powder',
+    keyIngredients: 'Ashwagandha (Withania somnifera) Root Extract & Powder',
     images: [
       '/assets/Buy-Ashwagandha-Tablet-for-Vital.webp',
       '/assets/Organic_Ashwagandha_Powder_by_Vedi_Herbals_-_Ayurvedic_Super_Herb.webp'
@@ -303,6 +323,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '02-supplements',
     subCategory: 'Dietary Supplements',
     title: 'Ayurcalm Cough Syrup',
+    botanicalName: 'Piper nigrum & Zingiber officinale',
     tagline: 'Quick Relief From Dry & Wet Cough',
     badges: ['NON-DROWSY', 'Respiratory & Throat Soothing'],
     indications: [
@@ -313,7 +334,7 @@ export const PRODUCTS: Product[] = [
       'Helps soothe throat irritation and support relief from cough.'
     ],
     variant: '100ml in a Bottle',
-    keyIngredients: 'Marica, Bhringaraj, Tejpatta, Sunthi etc.',
+    keyIngredients: 'Marica (Piper nigrum), Bhringaraj, Tejpatta, Sunthi (Zingiber officinale) etc.',
     images: ['/assets/Buy-Ayurcalm-Ayurvedic-Cough-Syrup-Relief-For-Throat.webp']
   },
   {
@@ -332,7 +353,7 @@ export const PRODUCTS: Product[] = [
       'Rich in antioxidant properties to help protect against oxidative stress.'
     ],
     variant: '60 Capsules in a Bottle; 500mg Each',
-    keyIngredients: 'Hadjod Stem Extract, Marica, Bhringaraj, Tejpatta, Sunthi',
+    keyIngredients: 'Hadjod (Cissus quadrangularis) Stem Extract, Marica, Bhringaraj, Tejpatta, Sunthi',
     images: ['/assets/Buy-Bonewiz-Hadjod-Capsules-Natural-Bone-Protector-Healer.webp']
   },
   {
@@ -351,7 +372,7 @@ export const PRODUCTS: Product[] = [
       'Traditionally used to support speech and developmental functions in children.'
     ],
     variant: '15 Tablets In A Strip, 500mg Each',
-    keyIngredients: 'Brahmi Whole Plant Extract',
+    keyIngredients: 'Brahmi (Bacopa monnieri) Whole Plant Extract',
     images: ['/assets/Buy-Brahmi-Tablet-Memory-and-Mental-Function-Booster.webp']
   },
   {
@@ -359,6 +380,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '02-supplements',
     subCategory: 'Dietary Supplements',
     title: "Femacin | Ayurvedic Women's Health Tonic",
+    botanicalName: 'Saraca asoca & Asparagus racemosus',
     tagline: 'Hormonal Balance & Menopausal Wellness',
     badges: ['PHYTOESTROGENS', "Women's Health & Fertility"],
     indications: [
@@ -369,7 +391,7 @@ export const PRODUCTS: Product[] = [
       'Supports libido and overall reproductive wellness.'
     ],
     variant: '210ml in a Bottle',
-    keyIngredients: 'Shatavari, Ashwagandha, Asoka, Nagkeshar etc.',
+    keyIngredients: 'Shatavari (Asparagus racemosus), Ashwagandha, Asoka (Saraca asoca), Nagkeshar etc.',
     images: ['/assets/Buy-Femacin-Ayurvedic-Womens-Health-Tonic-for-Hormonal-Balance.webp']
   },
   {
@@ -389,7 +411,7 @@ export const PRODUCTS: Product[] = [
       'Supports fluid balance and healthy urinary function.'
     ],
     variant: '60 Tablets In A Bottle, 500mg Each',
-    keyIngredients: 'Gokshura fruit extract',
+    keyIngredients: 'Gokshura (Tribulus terrestris) fruit extract',
     images: ['/assets/Buy-Gokshura-Tablet-Herbal-Supplement-Workout-Recovery.webp']
   },
   {
@@ -408,7 +430,7 @@ export const PRODUCTS: Product[] = [
       'Supports healthy metabolism and triglyceride levels.'
     ],
     variant: '15 Tablets In A Strip, 500mg Each',
-    keyIngredients: 'Gudmar leaf extract',
+    keyIngredients: 'Gudmar (Gymnema sylvestre) leaf extract',
     images: ['/assets/Shop-Gudmar-Leaf-Extract-Tablet-Insulin-Production.webp']
   },
   {
@@ -428,7 +450,7 @@ export const PRODUCTS: Product[] = [
       'Supports urinary tract health.'
     ],
     variant: '10 Capsules in a Strip; 500mg Each',
-    keyIngredients: 'Guduchi stem extract',
+    keyIngredients: 'Guduchi (Tinospora cordifolia) stem extract',
     images: ['/assets/Shop-_Guduchi-Giloy-Capsule-Health-Supplement-White-Blood-Cells.webp']
   },
   {
@@ -448,7 +470,7 @@ export const PRODUCTS: Product[] = [
       'Traditionally used to support detoxification and rejuvenation.'
     ],
     variant: '15 Tablets In A Strip, 500mg Each',
-    keyIngredients: 'Guggul gum extract',
+    keyIngredients: 'Guggul (Commiphora wightii) gum extract',
     images: ['/assets/guggul.webp']
   },
   {
@@ -467,7 +489,7 @@ export const PRODUCTS: Product[] = [
       'Supports healthy reproductive hormone balance and ovulatory function.'
     ],
     variant: '60 Capsules In a Bottle',
-    keyIngredients: 'Kapikachu seeds extract',
+    keyIngredients: 'Kapikachu (Mucuna pruriens) seeds extract',
     images: ['/assets/Buy-Kapikachu-Capsule-Energy-Booster-and-Cognitive_Enhancer.webp']
   },
   {
@@ -487,7 +509,7 @@ export const PRODUCTS: Product[] = [
       'Traditionally valued for its blood-purifying properties.'
     ],
     variant: '60 Capsules in a Bottle; 500mg Each',
-    keyIngredients: 'Neem Leaf Extract',
+    keyIngredients: 'Neem (Azadirachta indica) Leaf Extract',
     images: ['/assets/uy-Neem-Capsule-Natural-Blood-Purifier-Immune-Booster-Antioxidant-Properties.webp']
   },
   {
@@ -495,6 +517,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '02-supplements',
     subCategory: 'Dietary Supplements',
     title: 'NVD3 | 5000IU Natural Vitamin D3 (Daily)',
+    botanicalName: 'Parmelia perlata',
     tagline: 'Plant-Sourced Lichen/Stone Flower Vitamin D3',
     badges: ['5000 IU DAILY', 'Daily Bone & Immune Care'],
     indications: [
@@ -514,6 +537,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '02-supplements',
     subCategory: 'Dietary Supplements',
     title: 'NVD3+ | 50000IU Natural Vitamin D3 (Weekly)',
+    botanicalName: 'Parmelia perlata',
     tagline: 'High Potency Botanical Vitamin D3',
     badges: ['50000 IU WEEKLY', 'High Potency Bone Support'],
     indications: [
@@ -533,6 +557,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '02-supplements',
     subCategory: 'Dietary Supplements',
     title: 'Pudin Punch',
+    botanicalName: 'Mentha arvensis',
     tagline: 'Refreshing Digestant & Respiratory Soother',
     badges: ['ANTIOXIDANT HERBS', 'Digestive & Oral Hygiene'],
     indications: [
@@ -542,7 +567,7 @@ export const PRODUCTS: Product[] = [
       'Contains antioxidant-rich herbs with Vitamins A and C to support overall wellness.'
     ],
     variant: '60gm in a Can',
-    keyIngredients: 'Pudina Leaves, Guava Leaves, Sunthi, etc.',
+    keyIngredients: 'Pudina (Mentha arvensis) Leaves, Guava Leaves, Sunthi, etc.',
     images: ['/assets/PUDIN-PUNCH-Herbal-Remedy-for-Acidity-and-Upset-Stomach.webp']
   },
   {
@@ -560,7 +585,7 @@ export const PRODUCTS: Product[] = [
       'Helps relieve pain and supports recovery during viral infections.'
     ],
     variant: '10 Capsules in a Strip; 500mg Each',
-    keyIngredients: 'Shallaki Ole-gum extract',
+    keyIngredients: 'Shallaki (Boswellia serrata) Ole-gum extract',
     images: ['/assets/Buy-Shallaki-Capsule-for-Natural-Pain-Management.webp']
   },
   {
@@ -580,7 +605,7 @@ export const PRODUCTS: Product[] = [
       'Supports a healthy inflammatory response.'
     ],
     variant: '90 Tablets in a Bottle / 150g Powder Can',
-    keyIngredients: 'Shatavari Root Extract / Pure Powder',
+    keyIngredients: 'Shatavari (Asparagus racemosus) Root Extract & Powder',
     images: [
       '/assets/Buy-Shatavari-Tablet-Ayurvedic-Womens-Health-Supplement.webp',
       '/assets/shatavaripowder_v2.webp'
@@ -591,6 +616,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '02-supplements',
     subCategory: 'Dietary Supplements',
     title: 'Triphala Extract Tablet & Churna',
+    botanicalName: 'Terminalia chebula, Terminalia bellirica & Emblica officinalis',
     tagline: 'Triple-Herb Colon Cleansing & Antioxidant',
     badges: ['TRIDOSHA BALANCING', 'Extract Tablet & Churna Powder'],
     indications: [
@@ -602,7 +628,7 @@ export const PRODUCTS: Product[] = [
       'Rich in antioxidants and Vitamin C to support overall wellness.'
     ],
     variant: '90 Extract Tablets / 150g Churna Powder Can',
-    keyIngredients: 'Haritaki, Bibhitaki, Amalaki',
+    keyIngredients: 'Haritaki (Terminalia chebula), Bibhitaki (Terminalia bellirica), Amalaki (Emblica officinalis)',
     images: [
       '/assets/Buy-Triphala-Extract-Tablet-Natural-Constipation-Relief.webp',
       '/assets/Buy-Triphala-Churna-Natural-Antioxidant-Colon-Cleanser.webp'
@@ -615,6 +641,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '03-hempfood',
     subCategory: 'HEMP FOOD & NUTRITION',
     title: 'Hempcool',
+    botanicalName: 'Cannabis sativa',
     tagline: 'Cooling Digestive & Gut Comfort Elixir',
     badges: ['HEMPSEED NUTRITION', 'Body Cooling & Gut Relief'],
     indications: [
@@ -627,7 +654,7 @@ export const PRODUCTS: Product[] = [
       'Supports relaxation and emotional balance.'
     ],
     variant: '15 Sachets in a Box; 5g Each',
-    keyIngredients: 'Almonds, Muskmelon seeds, Hempseeds, Elaichi, Rose Petals etc.',
+    keyIngredients: 'Almonds, Muskmelon seeds, Hempseeds (Cannabis sativa), Elaichi, Rose Petals etc.',
     images: ['/assets/Hempcool_V2.webp']
   },
   {
@@ -635,6 +662,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '03-hempfood',
     subCategory: 'HEMP FOOD & NUTRITION',
     title: 'Hempseed Oil – Coldpressed',
+    botanicalName: 'Cannabis sativa',
     tagline: 'Perfect 3:1 Omega-6 to Omega-3 Balance',
     badges: ['COLDPRESSED 3:1 OMEGA', 'Heart & Skin Superfood'],
     indications: [
@@ -645,7 +673,7 @@ export const PRODUCTS: Product[] = [
       'Provides essential plant-based fats and antioxidant support.'
     ],
     variant: '200ml In a Bottle',
-    keyIngredients: 'Cold-pressed hempseed oil',
+    keyIngredients: 'Cold-pressed hempseed oil (Cannabis sativa)',
     images: ['/assets/Hempseedoil.webp']
   },
 
@@ -655,6 +683,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '04-personalcare',
     subCategory: 'Skin care & Personal Care',
     title: 'Castile Liquid Soap',
+    botanicalName: 'Olea europaea & Cannabis sativa',
     tagline: '100% Pure Virgin Plant Oil Cleanser',
     badges: ['LIQUID SOAP RANGE', 'Unscented, Lavender & Cedarwood'],
     indications: [
@@ -666,7 +695,7 @@ export const PRODUCTS: Product[] = [
       'Natural Glycerin – Retained during saponification to help keep skin soft and moisturized.'
     ],
     variant: '280ml & 50ml Bottles | Variants: Unscented, Lavender, Cedarwood & Patchouli',
-    keyIngredients: 'Olive Oil, Hemp Seed Oil, Coconut Oil, Castor Oil, Natural Glycerin & Pure Essential Oils',
+    keyIngredients: 'Olive Oil (Olea europaea), Hemp Seed Oil (Cannabis sativa), Coconut Oil, Castor Oil, Natural Glycerin & Pure Essential Oils',
     images: [
       '/assets/Buy-Unscented-Liquid-Castile-Soap-Hempseed-Oil-Vegan-Natural.webp',
       '/assets/Buy-Lavender-Liquid-Castile-Soap-Hempseed-Oil-Organic-Natural.webp',
@@ -678,6 +707,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '04-personalcare',
     subCategory: 'Skin care & Personal Care',
     title: 'Castile Bar Soap',
+    botanicalName: 'Olea europaea & Cannabis sativa',
     tagline: 'Gentle Cold-Process Soap for Sensitive Skin & Babies',
     badges: ['BAR SOAP RANGE', 'Cold-Process 100g Bars'],
     indications: [
@@ -688,13 +718,12 @@ export const PRODUCTS: Product[] = [
       'Coconut Oil – Creates a rich lather while gently cleansing the skin.',
       'Fragrance-Free & Gentle – Free from artificial fragrances and harsh/toxic chemicals.'
     ],
-    variant: '100gm Bar Soap | Variants: Unscented, Lime & Lemon, Lavender, Cedarwood, Holy Tulsi',
-    keyIngredients: 'Cold-pressed Olive Oil, Hemp Seed Oil, Coconut Oil, Natural Glycerin',
+    variant: '100gm Bar Soap | Variants: Unscented, Lime & Lemon, Lavender, Holy Tulsi',
+    keyIngredients: 'Cold-pressed Olive Oil (Olea europaea), Hemp Seed Oil (Cannabis sativa), Coconut Oil, Natural Glycerin',
     images: [
       '/assets/Buy-Natural-Unscented-Castile-Soap-Vedi-Organic.webp',
       '/assets/Buy-Lime-Lemon-Bar-Soap-Hempseed-Oil-Skin-Cleansing.webp',
       '/assets/Buy-Lavender-Bar-Soap-Hempseed-Oil-Skin-Cleansing.webp',
-      '/assets/Shop-Organic-Cedarwood-Patchouli-Castile-Soap-Hempseed-Oil.webp',
       '/assets/Buy-Natural-Tulsi-Castile-Soap-Vedi-Organic.webp'
     ]
   },
@@ -703,6 +732,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '04-personalcare',
     subCategory: 'Skin care & Personal Care',
     title: 'Aloe Vera & Hemp Moisturizing Cream',
+    botanicalName: 'Aloe barbadensis & Cannabis sativa',
     tagline: 'Deep Moisture Barrier & Skin Elasticity Care',
     badges: ['LAVENDER ESSENTIAL OIL', 'Deep Hydration & Firmness'],
     indications: [
@@ -715,7 +745,7 @@ export const PRODUCTS: Product[] = [
       'Multi-Purpose Care – Suitable for all skin types, leaving skin soft, healthy and radiant.'
     ],
     variant: '50gm In A Jar',
-    keyIngredients: 'Aloe Vera Juice, Hemp Seed Oil, Lavender Essential Oil',
+    keyIngredients: 'Aloe Vera Juice (Aloe barbadensis), Hemp Seed Oil (Cannabis sativa), Lavender Essential Oil',
     images: ['/assets/Buy-Organic-Aloe-Vera-Hemp-Cream-Vitamin-E-Nourishment.webp']
   },
   {
@@ -723,6 +753,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '04-personalcare',
     subCategory: 'Skin care & Personal Care',
     title: 'Aloe Vera Gel with Ashwagandha & Mulethi',
+    botanicalName: 'Aloe barbadensis, Withania somnifera & Glycyrrhiza glabra',
     tagline: 'Lightweight Soothing & Stress Relief Gel',
     badges: ['SOOTHING BOTANICAL GEL', 'Ashwagandha & Mulethi'],
     indications: [
@@ -734,7 +765,7 @@ export const PRODUCTS: Product[] = [
       'Suitable for everyday use.'
     ],
     variant: '50ml In A Jar',
-    keyIngredients: 'Aloe Vera Gel, Ashwagandha Extract, Mulethi Extract',
+    keyIngredients: 'Aloe Vera Gel (Aloe barbadensis), Ashwagandha (Withania somnifera) Extract, Mulethi (Glycyrrhiza glabra) Extract',
     images: ['/assets/aloeveraashwogandha.webp']
   },
   {
@@ -742,6 +773,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '04-personalcare',
     subCategory: 'Skin care & Personal Care',
     title: 'Aloe Vera Gel with Rose',
+    botanicalName: 'Aloe barbadensis & Rosa damascena',
     tagline: 'Cooling Botanical Refreshment',
     badges: ['PURE ROSE WATER', 'Non-Greasy Cooling Hydration'],
     indications: [
@@ -753,7 +785,7 @@ export const PRODUCTS: Product[] = [
       'Suitable for everyday use.'
     ],
     variant: '50ml In A Jar',
-    keyIngredients: 'Aloe Vera Gel, Pure Rose Extract & Hydrosol',
+    keyIngredients: 'Aloe Vera Gel (Aloe barbadensis), Pure Rose (Rosa damascena) Extract & Hydrosol',
     images: ['/assets/ALOE ROSE.webp']
   },
   {
@@ -761,6 +793,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '04-personalcare',
     subCategory: 'Skin care & Personal Care',
     title: 'Aloe Vera Gel with Saffron',
+    botanicalName: 'Aloe barbadensis & Crocus sativus',
     tagline: 'Radiance & Complexion Enhancement',
     badges: ['KASHMIRI SAFFRON', 'Radiance & Smoothness'],
     indications: [
@@ -772,7 +805,7 @@ export const PRODUCTS: Product[] = [
       'Suitable for everyday use.'
     ],
     variant: '50ml In A Jar',
-    keyIngredients: 'Aloe Vera Gel, Kumkuma / Saffron Extract',
+    keyIngredients: 'Aloe Vera Gel (Aloe barbadensis), Saffron (Crocus sativus) Extract',
     images: ['/assets/ALOE SAFFRONwebp.webp']
   },
   {
@@ -780,6 +813,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '04-personalcare',
     subCategory: 'Skin care & Personal Care',
     title: 'Multi-herbal Shampoo With Hempseed Oil',
+    botanicalName: 'Emblica officinalis & Cannabis sativa',
     tagline: 'Sulfate & Paraben Free Hair & Scalp Nourishment',
     badges: ['SULFATE FREE', 'Scalp Care & Frizz Reduction'],
     indications: [
@@ -793,7 +827,7 @@ export const PRODUCTS: Product[] = [
       'For All Hair Types – Suitable for regular hair and scalp cleansing.'
     ],
     variant: '200ml in a Bottle',
-    keyIngredients: 'Amla (Gooseberry), Hibiscus, Curry Leaves, Fenugreek, Coconut Milk, Hemp Seed Oil, Lavender Essential Oil',
+    keyIngredients: 'Amla (Emblica officinalis), Hibiscus, Curry Leaves, Fenugreek, Coconut Milk, Hemp Seed Oil (Cannabis sativa), Lavender Essential Oil',
     images: ['/assets/Buy-Multi-Herbal-Shampoo-with-Hempseed-Oil-Soothing-Lavender-Formula.webp']
   },
   {
@@ -801,6 +835,7 @@ export const PRODUCTS: Product[] = [
     categoryId: '04-personalcare',
     subCategory: 'Skin care & Personal Care',
     title: 'Cherry Blossom Hair Conditioner with Mango Butter',
+    botanicalName: 'Prunus serrulata & Mangifera indica',
     tagline: 'Rich Deep Conditioning & Silky Finish',
     badges: ['MANGO BUTTER', 'Silky Smooth & Floral Fragrance'],
     indications: [
@@ -813,7 +848,7 @@ export const PRODUCTS: Product[] = [
       'Everyday Hair Care – Suitable for regular use and various hair types.'
     ],
     variant: '200ml In a Bottle',
-    keyIngredients: 'Mango Butter, Natural Cherry Blossom Extract, Plant Emulsifiers',
+    keyIngredients: 'Mango Butter (Mangifera indica), Natural Cherry Blossom (Prunus serrulata) Extract, Plant Emulsifiers',
     images: ['/assets/conditioner.webp']
   }
 ];
