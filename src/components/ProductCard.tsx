@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Product } from '../data/products';
+import { Product, CATEGORIES } from '../data/products';
 import { ShieldAlert } from 'lucide-react';
 
 interface ProductCardProps {
@@ -44,9 +44,55 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
       ? product.images[currentImgIndex]
       : '/assets/LOGO.png';
 
+  const categoryObj = CATEGORIES.find((c) => c.id === product.categoryId);
+
   return (
     <article className="product-card">
-      {/* Top Column: Square Image Box with Auto-Slide Carousel */}
+      {/* Print-Only Top Header Ribbon for PDF Download */}
+      <div className="print-product-header">
+        <div className="print-header-brand">
+          <img
+            src="/assets/LOGO_header.png"
+            alt="Vedi Herbals"
+            className="print-logo-img"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = '/assets/LOGO.png';
+            }}
+          />
+          <span className="print-catalog-title">VEDI HERBALS — PRODUCT CATALOGUE</span>
+        </div>
+        <div className="print-header-category">
+          {categoryObj?.name || 'PRODUCT CATALOGUE'}
+          {product.subCategory ? ` • ${product.subCategory}` : ''}
+        </div>
+      </div>
+
+      {/* Print-Only Top Images Row for PDF Download (up to 3 images side-by-side) */}
+      <div className="print-images-row">
+        {(product.images && product.images.length > 0 ? product.images : ['/assets/LOGO.png'])
+          .slice(0, 3)
+          .map((imgSrc, idx) => (
+            <div key={idx} className="print-image-frame">
+              {idx === 0 && product.isRx && (
+                <span className="card-rx-badge" style={{ position: 'absolute', top: '6px', left: '6px', fontSize: '0.6rem', padding: '0.15rem 0.4rem' }}>
+                  Rx ONLY
+                </span>
+              )}
+              <img
+                src={imgSrc}
+                alt={`${product.title} variant ${idx + 1}`}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = '/assets/LOGO.png';
+                }}
+              />
+              {product.images && product.images.length > 1 && (
+                <span className="print-image-label">Format {idx + 1}</span>
+              )}
+            </div>
+          ))}
+      </div>
+
+      {/* Top Column: Square Image Box with Auto-Slide Carousel (Screen Only) */}
       <div className="card-image-box" onClick={() => onSelect(product)} style={{ cursor: 'pointer' }}>
         {product.isRx && (
           <span className="card-rx-badge" title="Physician Supervised Formulation">
@@ -140,6 +186,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
             <span className="inset-val">{renderWithItalicBotanicals(product.keyIngredients)}</span>
           </div>
         </div>
+      </div>
+
+      {/* Print-Only Bottom Footer Ribbon for PDF Download */}
+      <div className="print-product-footer">
+        <span>www.vediherbals.com • Authentic Ayurvedic & Physician-Guided Formulations</span>
+        <span>Contact: namaste@vediherbals.com | +91 022 48931316</span>
       </div>
     </article>
   );

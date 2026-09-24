@@ -887,25 +887,329 @@ h1, h2, h3, h4, h5, h6,
   color: #FFFFFF;
 }
 
-/* Print Stylesheet Optimization */
+/* Hidden on screen web interface */
+.print-product-header,
+.print-images-row,
+.print-product-footer {
+  display: none;
+}
+
+/* Comprehensive Executive Print / PDF Download Stylesheet */
 @media print {
-  .navbar, .category-bar-wrapper, .btn-pdf, .modal-overlay, .search-box {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 12mm 8mm 12mm;
+  }
+
+  /* Force background colors and imagery in print/PDF */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Hide interactive, screen-only UI elements */
+  .navbar, 
+  .category-bar-wrapper, 
+  .btn-pdf, 
+  .modal-overlay, 
+  .search-box, 
+  .carousel-dots, 
+  .carousel-variant-badge,
+  .category-header-block,
+  .sub-category-title,
+  .rx-notice-banner {
     display: none !important;
   }
-  body {
+
+  body, html {
     background: #FFFFFF !important;
-    color: #000000 !important;
+    color: #111111 !important;
+    font-size: 10pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
   }
-  .story-promise-card, .product-card, .founders-note-card {
+
+  .main-wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Cover Page / Hero & Story Section */
+  .hero-section {
+    padding: 3rem 2rem !important;
+    background: #143828 !important;
+    color: #FFFFFF !important;
+    border-radius: 16px !important;
+    margin-bottom: 2rem !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .story-promise-container {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    break-after: page !important;
+    page-break-after: always !important;
+  }
+
+  .story-promise-card {
     box-shadow: none !important;
-    border: 1px solid #CCCCCC !important;
-    break-inside: avoid;
+    border: 1px solid #D8D2C4 !important;
+    padding: 2.5rem !important;
   }
+
+  .catalog-container {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
   .product-grid {
     display: block !important;
   }
+
+  /* FORCED SINGLE PRODUCT PER PAGE IN PDF (Top 3 Images + Bottom Text) */
   .product-card {
-    margin-bottom: 2rem !important;
+    page-break-before: always !important;
+    break-before: page !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid-page !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+
+    height: 255mm !important;
+    max-height: 260mm !important;
+    box-sizing: border-box !important;
+
+    padding: 1.25rem 1.5rem !important;
+    margin: 0 0 0 0 !important;
+    background: #FFFFFF !important;
+    border: 1px solid #D8D2C4 !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  /* Hide screen-only single image carousel box */
+  .card-image-box {
+    display: none !important;
+  }
+
+  /* Print Header Ribbon at top of page */
+  .print-product-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    border-bottom: 2px solid var(--color-gold) !important;
+    padding-bottom: 0.4rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .print-header-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+  }
+
+  .print-logo-img {
+    height: 26px !important;
+    width: auto !important;
+  }
+
+  .print-catalog-title {
+    font-family: var(--font-subtext) !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.08em !important;
+    color: #143828 !important;
+  }
+
+  .print-header-category {
+    font-family: var(--font-subtext) !important;
+    font-weight: 600 !important;
+    font-size: 0.7rem !important;
+    color: #555555 !important;
+    text-transform: uppercase !important;
+  }
+
+  /* TOP SECTION: 3 Side-by-Side Images Row on Top of Page */
+  .print-images-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.85rem !important;
+    width: 100% !important;
+    height: 90mm !important;
+    max-height: 90mm !important;
+    margin-bottom: 0.6rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .print-image-frame {
+    flex: 1 !important;
+    height: 100% !important;
+    max-height: 90mm !important;
+    background: #FAF8F5 !important;
+    border: 1px solid #E8E2D5 !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.5rem !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+
+  .print-image-frame img {
+    max-height: 75mm !important;
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .print-image-label {
+    font-family: var(--font-subtext) !important;
+    font-size: 0.6rem !important;
+    font-weight: 700 !important;
+    color: #666666 !important;
+    margin-top: 0.2rem !important;
+    text-transform: uppercase !important;
+  }
+
+  /* BOTTOM SECTION: Text Details below Images */
+  .card-content-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    flex: 1 !important;
+    width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .card-badges-row {
+    margin-bottom: 0.35rem !important;
+  }
+
+  .card-product-title {
+    font-size: 1.55rem !important;
+    color: #143828 !important;
+    line-height: 1.15 !important;
+    margin-bottom: 0.15rem !important;
+  }
+
+  .card-botanical-name {
+    font-size: 0.82rem !important;
+    color: #555555 !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .card-tagline {
+    font-size: 0.84rem !important;
+    color: #4A5852 !important;
+    margin-bottom: 0.6rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .indications-heading {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.25rem !important;
+    color: #143828 !important;
+  }
+
+  .indications-list {
+    margin-bottom: 0.6rem !important;
+    gap: 0.2rem !important;
+  }
+
+  .indication-item {
+    font-size: 0.78rem !important;
+    line-height: 1.3 !important;
+    color: #2D3A34 !important;
+  }
+
+  .card-inset-box {
+    background: #FAF7F0 !important;
+    border: 1px solid #E2DACB !important;
+    border-radius: 8px !important;
+    padding: 0.65rem 0.9rem !important;
+    margin-top: auto !important;
+    font-size: 0.78rem !important;
+  }
+
+  .inset-label {
+    font-weight: 700 !important;
+    color: #143828 !important;
+    font-size: 0.78rem !important;
+  }
+
+  .inset-val {
+    color: #33443C !important;
+    font-size: 0.78rem !important;
+  }
+
+  /* Print Footer Ribbon */
+  .print-product-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    border-top: 1px solid #E2DACB !important;
+    padding-top: 0.4rem !important;
+    margin-top: 0.5rem !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.68rem !important;
+    color: #666666 !important;
+  }
+
+  /* Section 05: Wellness Clinic Page */
+  [id="05-wellness"] {
+    page-break-before: always !important;
+    break-before: page !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    margin-top: 0 !important;
+  }
+
+  .wellness-section {
+    margin-top: 0 !important;
+    padding: 2.5rem !important;
+    box-shadow: none !important;
+    border-radius: 20px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Founder's Note & Footer Page */
+  .founders-note-card {
+    page-break-before: always !important;
+    break-before: page !important;
+    margin-top: 0 !important;
+    padding: 2.5rem !important;
+    box-shadow: none !important;
+    border: 1px solid #D8D2C4 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .site-footer {
+    page-break-before: always !important;
+    break-before: page !important;
+    padding: 2.5rem 2rem 2rem 2rem !important;
   }
 }
 
